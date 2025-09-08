@@ -876,10 +876,6 @@ to{transform:rotate(360deg)}}
   
   <div class="container">
     <header class="header">
-
-
-
-
       <div class="badge-mendel">IIS MENDEL</div>
 <h1>🇮🇪 Stage Linguistico – Malahide (Dublino) 🇮🇪</h1>
 
@@ -887,7 +883,7 @@ to{transform:rotate(360deg)}}
       
       <div class="countdown">
         <div class="countdown-text">🎒 Partenza tra:</div>
-        <div class="countdown-days">14 giorni!</div>
+        <div class="countdown-days">Calcolo in corso...</div>
       </div>
     </header>
 
@@ -910,7 +906,7 @@ to{transform:rotate(360deg)}}
       <h2 data-icon="🎓">Informazioni generali</h2>
       <p><strong>📍 Località:</strong> Malahide (Dublin Area), Irlanda<br>
          <strong>🏫 Scuola:</strong> <a href="https://www.iceireland.com/" target="_blank">Irish College of English – ICE</a><br>
-         <strong>🌐 Turismo ufficiale:</strong> <a href="https://www.ireland.com/it-it/" target="_blank">Visit Ireland Italia</a><br>
+         <strong>🌍 Turismo ufficiale:</strong> <a href="https://www.ireland.com/it-it/" target="_blank">Visit Ireland Italia</a><br>
          <strong>📄</strong> <a href="https://agrariomendel.edu.it/allegati/all/5013-stage-irlanda-manifesto-compressed.pdf" target="_blank">Scarica manifesto completo (PDF)</a>
       </p>
     </section>
@@ -955,7 +951,7 @@ to{transform:rotate(360deg)}}
         </div>
 
         <div class="app-card">
-          <div class="app-icon">🌐</div>
+          <div class="app-icon">🌍</div>
           <div class="app-name">Google Translate</div>
           <div class="app-description">Traduttore con funzione OFFLINE e fotocamera per tradurre cartelli e menù istantaneamente.</div>
           <div class="app-buttons">
@@ -1040,7 +1036,7 @@ to{transform:rotate(360deg)}}
       
       <h3 style="color: var(--light-green); margin: 25px 0 15px 0; font-size: 1.3rem;">🥧 Specialità Irlandesi da Provare:</h3>
       <p>🥔 <strong>Irish Stew</strong> (stufato di agnello con patate)<br>
-         🐟 <strong>Fish & Chips</strong> (pesce fritto con patatine)<br>
+         🟠 <strong>Fish & Chips</strong> (pesce fritto con patatine)<br>
          🥧 <strong>Shepherd's Pie</strong> (pasticcio di carne con purè)<br>
          🍞 <strong>Soda Bread</strong> (pane irlandese tradizionale)<br>
          🥓 <strong>Full Irish Breakfast</strong> (colazione completa irlandese)<br>
@@ -1335,7 +1331,7 @@ to{transform:rotate(360deg)}}
         <div>Posso avere dell'acqua?</div><div>Can I have some water?</div>
       </div>
       
-      <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">🏪 Shopping e Acquisti:</h3>
+      <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">🛒 Shopping e Acquisti:</h3>
       <div class="phrase-grid">
         <div><strong>🇮🇹 Quanto costa questo?</strong></div><div><strong>🇬🇧 How much is this?</strong></div>
         <div>È troppo caro</div><div>It's too expensive</div>
@@ -1462,7 +1458,7 @@ to{transform:rotate(360deg)}}
 <div class="button-row" aria-label="Collezione di pulsanti Media">
   <a class="media-pill video" href="https://youtu.be/Gfj8V3bx0J4?si=HAxK4He1MygaOLRx" target="_blank" rel="noopener">
     <span class="icon">▶</span>
-    <span class="label">Scopri l’Irlanda</span>
+    <span class="label">Scopri l'Irlanda</span>
   </a>
   <a class="media-pill guide" href="https://www.irlandando.it/" target="_blank" rel="noopener" title="Guida italiana su Irlanda e Dublino">
     <span class="icon">📘</span>
@@ -1526,21 +1522,44 @@ to{transform:rotate(360deg)}}
       }
     }
 
-    // Dynamic countdown update
+    // COUNTDOWN CORRETTO - Sostituisce la funzione problematica
     function updateCountdown() {
       const now = new Date();
-      const departure = new Date(now.getTime() + (14 * 24 * 60 * 60 * 1000));
+      
+      // DATA DI PARTENZA: 21 settembre 2025 alle 8:00
+      // Formato: YYYY-MM-DDTHH:MM:SS (24h)
+      const departure = new Date('2025-09-21T08:00:00');
+      
       const diff = departure - now;
-      const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+      
+      if (diff <= 0) {
+        // Se la data è passata
+        document.querySelector('.countdown-days').textContent = "È il momento di partire!";
+        document.querySelector('.countdown-text').textContent = "🇮🇪 Siete in viaggio!";
+        return;
+      }
+      
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       
       const countdownElement = document.querySelector('.countdown-days');
       if (countdownElement) {
-        countdownElement.textContent = `${days} giorni!`;
+        if (days > 1) {
+          countdownElement.textContent = `${days} giorni!`;
+        } else if (days === 1) {
+          countdownElement.textContent = `1 giorno e ${hours} ore!`;
+        } else if (hours > 0) {
+          countdownElement.textContent = `${hours} ore e ${minutes} minuti!`;
+        } else {
+          countdownElement.textContent = `${minutes} minuti!`;
+        }
       }
     }
     
+    // Aggiornamento ogni ora
     updateCountdown();
-    setInterval(updateCountdown, 86400000);
+    setInterval(updateCountdown, 3600000); // 1 ora = 3600000 millisecondi
   </script>
 
 <script>
