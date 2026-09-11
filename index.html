@@ -857,6 +857,100 @@ to{transform:rotate(360deg)}}
 #risorse .button-row .media-pill.video,
 #risorse .button-row .media-pill.guide{background:linear-gradient(135deg,#FF7900,#FF5722)}
 #risorse .button-row .media-pill.spotify{background:linear-gradient(135deg,#1DB954,#1AA34A);color:#fff !important}
+
+    /* ===== AGGIUNTE 2026: player, progress bar, reveal, back-to-top ===== */
+    .date-badge {
+      display: inline-block;
+      margin: 0 auto 18px;
+      padding: 10px 26px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--irish-green), var(--irish-orange));
+      color: #fff !important;
+      font-weight: 700;
+      letter-spacing: .5px;
+      font-size: 1.05rem;
+      box-shadow: 0 10px 24px rgba(0,154,73,.35);
+      position: relative;
+      z-index: 2;
+      animation: badgeGlow 3s ease-in-out infinite;
+    }
+    @keyframes badgeGlow {
+      0%,100% { box-shadow: 0 10px 24px rgba(0,154,73,.35); }
+      50%     { box-shadow: 0 10px 34px rgba(255,121,0,.45); }
+    }
+
+    /* Barra di avanzamento lettura */
+    .read-progress {
+      position: fixed; top: 0; left: 0; height: 4px; width: 0%;
+      background: linear-gradient(90deg, var(--irish-green), var(--irish-orange));
+      z-index: 2000; transition: width .1s linear;
+    }
+
+    /* Comparsa progressiva delle sezioni */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* Torna su */
+    #backToTop {
+      position: fixed; right: 20px; bottom: 96px;
+      width: 50px; height: 50px; border: none; border-radius: 50%;
+      background: linear-gradient(135deg, var(--irish-green), var(--dark-green));
+      color: #fff !important; font-size: 1.3rem; cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,.3);
+      opacity: 0; visibility: hidden; transform: translateY(12px);
+      transition: all .3s ease; z-index: 1500;
+    }
+    #backToTop.show { opacity: 1; visibility: visible; transform: none; }
+    #backToTop:hover { transform: translateY(-4px) scale(1.08); }
+
+    /* ===== Player musicale ===== */
+    .music-player {
+      position: fixed; left: 50%; transform: translateX(-50%);
+      bottom: 16px; width: min(560px, calc(100% - 32px));
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 16px; border-radius: 50px;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 12px 34px rgba(0,0,0,.28);
+      border: 2px solid var(--irish-green);
+      z-index: 1600;
+    }
+    .music-player button {
+      width: 42px; height: 42px; flex: 0 0 42px;
+      border: none; border-radius: 50%; cursor: pointer;
+      background: linear-gradient(135deg, var(--irish-green), var(--light-green));
+      color: #fff !important; font-size: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      transition: all .25s ease;
+    }
+    .music-player button:hover { transform: scale(1.1); box-shadow: 0 6px 14px rgba(0,154,73,.4); }
+    .music-player button.secondary { background: linear-gradient(135deg, var(--irish-orange), #FF5722); }
+    .music-player .track-info { flex: 1 1 auto; min-width: 0; }
+    .music-player .track-label {
+      font-size: .72rem; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--text-light) !important; font-weight: 600;
+    }
+    .music-player .track-title {
+      font-size: .95rem; font-weight: 700; color: var(--irish-green) !important;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .music-player .bars { display: flex; gap: 3px; align-items: flex-end; height: 20px; flex: 0 0 auto; }
+    .music-player .bars span {
+      width: 3px; height: 6px; border-radius: 2px; background: var(--irish-orange);
+    }
+    .music-player.playing .bars span { animation: eq .9s ease-in-out infinite; }
+    .music-player.playing .bars span:nth-child(2) { animation-delay: .15s; }
+    .music-player.playing .bars span:nth-child(3) { animation-delay: .3s; }
+    .music-player.playing .bars span:nth-child(4) { animation-delay: .45s; }
+    @keyframes eq { 0%,100% { height: 5px; } 50% { height: 19px; } }
+
+    @media (max-width: 600px) {
+      .music-player { gap: 8px; padding: 8px 12px; }
+      .music-player button { width: 38px; height: 38px; flex: 0 0 38px; }
+      .music-player .bars { display: none; }
+      #backToTop { bottom: 88px; right: 14px; width: 44px; height: 44px; }
+    }
+
 </style>
 </head>
 <body>
@@ -878,6 +972,8 @@ to{transform:rotate(360deg)}}
     <header class="header">
       <div class="badge-mendel">IIS MENDEL</div>
 <h1>🇮🇪 Stage Linguistico — Malahide (Dublino) 🇮🇪</h1>
+
+      <div class="date-badge">📅 27 settembre – 4 ottobre 2026</div>
 
       <p>La tua avventura irlandese ti aspetta! Guida completa per una settimana indimenticabile di studio e scoperte a Malahide.</p>
       
@@ -1573,7 +1669,7 @@ to{transform:rotate(360deg)}}
   </div>
 
   <footer class="footer">
-    <p>🍀 © 2025 — Pagina realizzata dal Team Buone Pratiche in collaborazione con il Dipartimento di Inglese dell'IIS Mendel 🍀<br>
+    <p>🍀 © 2026 — Pagina realizzata dal Team Buone Pratiche in collaborazione con il Dipartimento di Inglese dell'IIS Mendel 🍀<br>
        <em>Sláinte! Che la fortuna irlandese vi accompagni in questa avventura!</em></p>
   
 
@@ -1625,8 +1721,8 @@ to{transform:rotate(360deg)}}
     function updateCountdown() {
       const now = new Date();
       
-      // DATA DI PARTENZA: 21 settembre 2025 alle 8:00
-      const departure = new Date('2025-09-21T08:00:00');
+      // DATA DI PARTENZA: 27 settembre 2026 alle 8:00
+      const departure = new Date('2026-09-27T08:00:00');
       
       const diff = departure - now;
       
@@ -1641,7 +1737,7 @@ to{transform:rotate(360deg)}}
       const today = new Date();
       today.setHours(0, 0, 0, 0); // Inizio di oggi
       
-      const departureDay = new Date('2025-09-21');
+      const departureDay = new Date('2026-09-27');
       departureDay.setHours(0, 0, 0, 0); // Inizio del giorno di partenza
       
       const daysDiff = Math.ceil((departureDay - today) / (1000 * 60 * 60 * 24));
@@ -1742,5 +1838,98 @@ to{transform:rotate(360deg)}}
     setInterval(next, 5000);
   })();
 </script>
+
+  <div class="read-progress" id="readProgress"></div>
+
+  <button id="backToTop" aria-label="Torna su" title="Torna su">▲</button>
+
+  <div class="music-player" id="musicPlayer" aria-label="Lettore musicale">
+    <button id="btnPlay" aria-label="Riproduci o metti in pausa" title="Play / Pausa">▶</button>
+    <button id="btnMute" class="secondary" aria-label="Attiva o disattiva audio" title="Muto">🔊</button>
+    <button id="btnNext" class="secondary" aria-label="Brano successivo" title="Brano successivo">⏭</button>
+    <div class="track-info">
+      <div class="track-label">Colonna sonora irlandese</div>
+      <div class="track-title" id="trackTitle">Green Fields of Éire</div>
+    </div>
+    <div class="bars"><span></span><span></span><span></span><span></span></div>
+    <audio id="bgAudio" preload="none"></audio>
+  </div>
+
+  <script>
+  (function () {
+    // ---- Player musicale ----
+    var tracks = [
+      { title: "Green Fields of Éire", src: "Green_Fields_of_Eire.mp3" },
+      { title: "Shannon Morning",      src: "Shannon_Morning.mp3" },
+      { title: "Atlantic Light",       src: "Atlantic_Light.mp3" }
+    ];
+    var i = 0;
+    var audio = document.getElementById('bgAudio');
+    var player = document.getElementById('musicPlayer');
+    var btnPlay = document.getElementById('btnPlay');
+    var btnMute = document.getElementById('btnMute');
+    var btnNext = document.getElementById('btnNext');
+    var title = document.getElementById('trackTitle');
+
+    function load(index, autoplay) {
+      i = (index + tracks.length) % tracks.length;
+      audio.src = tracks[i].src;
+      title.textContent = tracks[i].title;
+      if (autoplay) { audio.play().catch(function () {}); }
+    }
+    load(0, false);
+
+    btnPlay.addEventListener('click', function () {
+      if (audio.paused) { audio.play().catch(function () {}); }
+      else { audio.pause(); }
+    });
+    btnMute.addEventListener('click', function () {
+      audio.muted = !audio.muted;
+      btnMute.textContent = audio.muted ? '🔇' : '🔊';
+    });
+    btnNext.addEventListener('click', function () {
+      var wasPlaying = !audio.paused;
+      load(i + 1, wasPlaying);
+    });
+    audio.addEventListener('ended', function () { load(i + 1, true); });
+    audio.addEventListener('play', function () {
+      btnPlay.textContent = '⏸'; player.classList.add('playing');
+    });
+    audio.addEventListener('pause', function () {
+      btnPlay.textContent = '▶'; player.classList.remove('playing');
+    });
+
+    // ---- Barra di avanzamento ----
+    var bar = document.getElementById('readProgress');
+    function progress() {
+      var h = document.documentElement;
+      var max = (h.scrollHeight - h.clientHeight) || 1;
+      bar.style.width = Math.min(100, (h.scrollTop || document.body.scrollTop) / max * 100) + '%';
+    }
+    window.addEventListener('scroll', progress, { passive: true });
+    progress();
+
+    // ---- Torna su ----
+    var top = document.getElementById('backToTop');
+    window.addEventListener('scroll', function () {
+      top.classList.toggle('show', window.scrollY > 400);
+    }, { passive: true });
+    top.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ---- Comparsa progressiva delle sezioni ----
+    var cards = document.querySelectorAll('.card');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.08 });
+      cards.forEach(function (c) { c.classList.add('reveal'); io.observe(c); });
+    }
+  })();
+  </script>
+
 </body>
 </html>
