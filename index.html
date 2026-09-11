@@ -999,6 +999,32 @@ to{transform:rotate(360deg)}}
       .prog-table td, .prog-table th { padding: 9px 10px; font-size: .85rem; }
     }
 
+
+    /* ===== Video incorporato ===== */
+    .video-embed {
+      margin: 10px 0 28px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 34px rgba(0,0,0,.3);
+      border: 3px solid var(--irish-green);
+      background: #000;
+    }
+    .video-embed .ratio {
+      position: relative; width: 100%; padding-top: 56.25%;
+    }
+    .video-embed iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+    }
+    .video-embed .vcaption {
+      padding: 12px 18px;
+      background: linear-gradient(135deg, var(--irish-green), var(--dark-green));
+      color: #fff !important; font-weight: 700; font-size: 1rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .video-embed .vcaption small {
+      display: block; font-weight: 400; font-size: .82rem; opacity: .9; color: #fff !important;
+    }
+
 </style>
 </head>
 <body>
@@ -1861,6 +1887,19 @@ to{transform:rotate(360deg)}}
 <section id="risorse" class="card culture-card">
   <h2 data-icon="🎬">Video e altre risorse</h2>
   <p>Una selezione rapida di contenuti utili per prepararti al viaggio.</p>
+
+  <div class="video-embed">
+    <div class="ratio">
+      <iframe src="https://www.youtube-nocookie.com/embed/HX7owlqwdhI"
+              title="STAGE IRLANDA 2026 - Presentazione"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+    </div>
+    <div class="vcaption">🎬 <span>STAGE IRLANDA 2026 — Presentazione<small>Guarda il video di presentazione del viaggio</small></span></div>
+  </div>
+
 <div class="button-row" aria-label="Collezione di pulsanti Media">
   <a class="media-pill video" href="https://youtu.be/Gfj8V3bx0J4?si=HAxK4He1MygaOLRx" target="_blank" rel="noopener">
     <span class="icon">▶</span>
