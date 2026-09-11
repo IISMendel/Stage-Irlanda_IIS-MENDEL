@@ -1871,17 +1871,38 @@ to{transform:rotate(360deg)}}
     var btnNext = document.getElementById('btnNext');
     var title = document.getElementById('trackTitle');
 
+    audio.volume = 0.55;
+
+    function say(msg) { title.textContent = msg; }
+
     function load(index, autoplay) {
       i = (index + tracks.length) % tracks.length;
       audio.src = tracks[i].src;
+      audio.load();
       title.textContent = tracks[i].title;
-      if (autoplay) { audio.play().catch(function () {}); }
+      if (autoplay) { start(); }
     }
     load(0, false);
 
+    function start() {
+      var p = audio.play();
+      if (p && p.catch) {
+        p.catch(function (err) {
+          console.error('Audio non riprodotto:', err, audio.src);
+          say('Audio bloccato — ritocca ▶');
+        });
+      }
+    }
+
+    // Se il file non si carica (404, nome sbagliato) lo dice invece di restare muto
+    audio.addEventListener('error', function () {
+      console.error('Impossibile caricare:', audio.currentSrc || audio.src);
+      say('File audio non trovato');
+    });
+    audio.addEventListener('canplay', function () { title.textContent = tracks[i].title; });
+
     btnPlay.addEventListener('click', function () {
-      if (audio.paused) { audio.play().catch(function () {}); }
-      else { audio.pause(); }
+      if (audio.paused) { start(); } else { audio.pause(); }
     });
     btnMute.addEventListener('click', function () {
       audio.muted = !audio.muted;
