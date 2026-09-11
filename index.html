@@ -301,6 +301,7 @@
     .food-card { border-left: 5px solid var(--light-green); }
     .culture-card { border-left: 5px solid var(--irish-green); }
     .maps-card { border-left: 5px solid var(--irish-orange); }
+    .tour-extra-card { border-left: 5px solid var(--light-green); }
     .contacts-card { border-left: 5px solid var(--light-green); }
     
     /* App Store Buttons */
@@ -951,6 +952,53 @@ to{transform:rotate(360deg)}}
       #backToTop { bottom: 88px; right: 14px; width: 44px; height: 44px; }
     }
 
+
+    /* ===== Programma ufficiale ICE 2026 ===== */
+    .flight-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px; margin: 20px 0 30px;
+    }
+    .flight-box {
+      border-radius: 16px; padding: 20px 22px; color: #fff !important;
+      box-shadow: 0 10px 26px rgba(0,0,0,.22);
+    }
+    .flight-box.out { background: linear-gradient(135deg, var(--irish-green), var(--dark-green)); }
+    .flight-box.back { background: linear-gradient(135deg, var(--irish-orange), #E65100); }
+    .flight-box .fl-label {
+      font-size: .75rem; letter-spacing: 1.5px; text-transform: uppercase;
+      opacity: .9; color: #fff !important; font-weight: 700;
+    }
+    .flight-box .fl-date { font-size: 1.35rem; font-weight: 800; margin: 4px 0 12px; color: #fff !important; }
+    .flight-route {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .flight-route .pt { text-align: center; color: #fff !important; }
+    .flight-route .pt .time { font-size: 1.5rem; font-weight: 800; line-height: 1; color: #fff !important; }
+    .flight-route .pt .apt { font-size: .82rem; opacity: .92; margin-top: 4px; color: #fff !important; }
+    .flight-route .arrow { flex: 1; text-align: center; font-size: 1.1rem; color: #fff !important; opacity: .85; }
+    .flight-box .fl-note { margin-top: 12px; font-size: .85rem; opacity: .92; color: #fff !important; }
+
+    .prog-table { width: 100%; border-collapse: separate; border-spacing: 0 6px; }
+    .prog-table th {
+      background: var(--dark-green); color: #fff !important; padding: 12px 14px;
+      font-size: .9rem; text-transform: uppercase; letter-spacing: .5px; text-align: left;
+    }
+    .prog-table th:first-child { border-radius: 10px 0 0 10px; }
+    .prog-table th:last-child { border-radius: 0 10px 10px 0; }
+    .prog-table td { padding: 12px 14px; vertical-align: middle; font-size: .95rem; }
+    .prog-table .day-cell {
+      background: var(--irish-orange); color: #fff !important; font-weight: 700;
+      border-radius: 10px 0 0 10px; white-space: nowrap;
+    }
+    .prog-table .am { background: rgba(0,154,73,.16); }
+    .prog-table .pm { background: rgba(63,81,181,.16); border-radius: 0 10px 10px 0; }
+    .prog-table tr:hover .am, .prog-table tr:hover .pm { background: rgba(0,154,73,.28); }
+    .prog-wrap { overflow-x: auto; }
+    @media (max-width: 600px) {
+      .prog-table { border-spacing: 0 4px; }
+      .prog-table td, .prog-table th { padding: 9px 10px; font-size: .85rem; }
+    }
+
 </style>
 </head>
 <body>
@@ -985,10 +1033,12 @@ to{transform:rotate(360deg)}}
 
     <nav class="nav">
       <a href="#info">ℹ️ Info</a>
+      <a href="#programma">📅 Programma</a>
       <a href="#trasporti">🚆 Trasporti</a>
       <a href="#apps">📱 App</a>
       <a href="#mangiare">🍽️ Mangiare</a>
-      <a href="#tour">🗺️ Tour</a>
+      <a href="#tour">🗺️ Uscite</a>
+      <a href="#extra">✨ Tempo libero</a>
       <a href="#mappe">📍 Mappe</a>
       <a href="#tempo-libero">🏰 Cultura</a>
       <a href="#frasario">💬 Frasario</a>
@@ -1004,6 +1054,87 @@ to{transform:rotate(360deg)}}
          <strong>🏫 Scuola:</strong> <a href="https://www.iceireland.com/" target="_blank">Irish College of English — ICE</a><br>
          <strong>🌍 Turismo ufficiale:</strong> <a href="https://www.ireland.com/it-it/" target="_blank">Visit Ireland Italia</a><br>
          <strong>📄</strong> <a href="https://agrariomendel.edu.it/allegati/all/5013-stage-irlanda-manifesto-compressed.pdf" target="_blank">Scarica manifesto completo (PDF)</a>
+      </p>
+    </section>
+
+    <section id="programma" class="card info-card">
+      <h2 data-icon="📅">Programma ufficiale — 27 settembre / 4 ottobre 2026</h2>
+
+      <div class="flight-grid">
+        <div class="flight-box out">
+          <div class="fl-label">✈️ Andata — Aer Lingus</div>
+          <div class="fl-date">Domenica 27 settembre 2026</div>
+          <div class="flight-route">
+            <div class="pt"><div class="time">11:20</div><div class="apt">Milano Linate (LIN)</div></div>
+            <div class="arrow">✈ — — — ➤</div>
+            <div class="pt"><div class="time">12:50</div><div class="apt">Dublino (DUB)</div></div>
+          </div>
+          <div class="fl-note">Orari locali · Trasferimento in pullman all'arrivo verso Malahide</div>
+        </div>
+
+        <div class="flight-box back">
+          <div class="fl-label">✈️ Ritorno — Aer Lingus</div>
+          <div class="fl-date">Domenica 4 ottobre 2026</div>
+          <div class="flight-route">
+            <div class="pt"><div class="time">18:00</div><div class="apt">Dublino (DUB)</div></div>
+            <div class="arrow">✈ — — — ➤</div>
+            <div class="pt"><div class="time">21:35</div><div class="apt">Milano Malpensa (MXP)</div></div>
+          </div>
+          <div class="fl-note">Attenzione: si parte da Linate ma si rientra a Malpensa</div>
+        </div>
+      </div>
+
+      <h3 style="color: var(--irish-green); margin: 10px 0 15px 0; font-size: 1.3rem;">🗓️ Giorno per giorno</h3>
+      <div class="prog-wrap">
+        <table class="prog-table">
+          <thead>
+            <tr><th>Giorno</th><th>Mattina</th><th>Pomeriggio</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="day-cell">Dom 27/09</td>
+              <td class="am" colspan="2" style="border-radius: 0 10px 10px 0;">✈️ Arrivo a Dublino e trasferimento a Malahide — sistemazione presso le famiglie</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Lun 28/09</td>
+              <td class="am">📘 Lezione di inglese · 9.00 – 12.00</td>
+              <td class="pm">🏙️ Dublin City Tour</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Mar 29/09</td>
+              <td class="am">📘 Lezione di inglese · 9.00 – 12.00</td>
+              <td class="pm">🌊 Howth Cliff Walk</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Mer 30/09</td>
+              <td class="am">📘 Lezione di inglese · 9.00 – 12.00</td>
+              <td class="pm">🌿 National Botanic Gardens</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Gio 01/10</td>
+              <td class="am">📘 Lezione di inglese · 9.00 – 12.00</td>
+              <td class="pm">🏛️ National Museum</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Ven 02/10</td>
+              <td class="am">📘 Lezione di inglese · 9.00 – 12.00</td>
+              <td class="pm">🏰 Malahide Castle</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Sab 03/10</td>
+              <td class="am" colspan="2" style="border-radius: 0 10px 10px 0;">⛰️ Intera giornata a Glendalough (Wicklow Mountains)</td>
+            </tr>
+            <tr>
+              <td class="day-cell">Dom 04/10</td>
+              <td class="am" colspan="2" style="border-radius: 0 10px 10px 0;">✈️ Trasferimento all'aeroporto di Dublino e rientro</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top: 20px; font-size: .95rem;">
+        🎓 <strong>Lezioni:</strong> dal lunedì al venerdì, 9.00 – 12.00 presso l'<a href="https://www.iceireland.com/" target="_blank">Irish College of English</a> di Malahide.<br>
+        🌿 <strong>Nota per la nostra scuola:</strong> la visita ai Giardini Botanici Nazionali di mercoledì è il collegamento diretto con l'indirizzo agrario — arrivate con qualche domanda pronta!
       </p>
     </section>
 
@@ -1140,81 +1271,160 @@ to{transform:rotate(360deg)}}
     </section>
 
     <section id="tour" class="card maps-card">
-      <h2 data-icon="🗺️">Tour Consigliati - 6 Giorni Indimenticabili</h2>
-      
+      <h2 data-icon="🗺️">Le uscite in programma — preparati bene</h2>
+      <p style="text-align: center; font-style: italic; margin-bottom: 25px;">
+        Ogni scheda corrisponde a un'uscita del <a href="#programma">programma ufficiale</a>.
+        Leggile prima di partire: sapere cosa stai per vedere cambia completamente l'esperienza.
+      </p>
+
       <div class="tour-grid">
         <div class="tour-card">
-          <div class="tour-title">🌊 GIORNO 1: Malahide → Howth</div>
-          <div class="tour-transport">🚌 Bus 42 (20 min) o DART (25 min)</div>
-          <ul style="margin-top: 10px;">
-            <li><a href="https://www.howth.ie/" target="_blank">Howth Cliff Walk (sentiero panoramico)</a></li>
-            <li><a href="https://www.howthcastle.ie/" target="_blank">Howth Castle & Gardens</a></li>
-            <li><a href="https://ireland-calling.com/howth-market/" target="_blank">Howth Market (weekend - mercato del pesce)</a></li>
-            <li>Pranzo: Fish & Chips sul porto di Howth</li>
-          </ul>
-        </div>
-        
-        <div class="tour-card">
-          <div class="tour-title">🛏️ GIORNO 2: Centro Dublino Storico</div>
+          <div class="tour-title">🏙️ LUNEDÌ 28/09: Dublin City Tour</div>
           <div class="tour-transport">🚊 DART Malahide → Connolly (30 min)</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.tcd.ie/visitors/book-of-kells/" target="_blank">Trinity College & Book of Kells</a></li>
-            <li><a href="https://www.dublincastle.ie/" target="_blank">Dublin Castle</a></li>
+            <li><a href="https://www.tcd.ie/visitors/book-of-kells/" target="_blank">Trinity College &amp; Book of Kells (manoscritto miniato dell'800 d.C.)</a></li>
+            <li><a href="https://www.dublincastle.ie/" target="_blank">Dublin Castle (sede del potere britannico fino al 1922)</a></li>
             <li><a href="https://christchurchcathedral.ie/" target="_blank">Christ Church Cathedral</a></li>
-            <li><a href="https://www.templebar.ie/" target="_blank">Temple Bar (pranzo e shopping)</a></li>
+            <li><a href="https://www.templebar.ie/" target="_blank">Temple Bar (quartiere dei pub e della musica dal vivo)</a></li>
+            <li>💡 Guarda l'<a href="https://www.gpomuseum.ie/" target="_blank">insurrezione del 1916</a> prima di partire: capirai molto di più i monumenti di O'Connell Street</li>
           </ul>
         </div>
-        
+
         <div class="tour-card">
-          <div class="tour-title">🍺 GIORNO 3: Guinness & Phoenix Park</div>
-          <div class="tour-transport">🚊 DART → Tara St, poi 🚌 Bus 123</div>
+          <div class="tour-title">🌊 MARTEDÌ 29/09: Howth Cliff Walk</div>
+          <div class="tour-transport">🚌 Bus 42 (20 min) o DART (25 min) da Malahide</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.guinness-storehouse.com/" target="_blank">Guinness Storehouse (mattina)</a></li>
-            <li><a href="https://phoenixpark.ie/" target="_blank">Phoenix Park (pomeriggio - zoo facoltativo)</a></li>
-            <li><a href="https://kilmainhamgaolmuseum.ie/" target="_blank">Kilmainham Gaol (se c'è tempo)</a></li>
-            <li>Cena in pub tradizionale irlandese</li>
+            <li><a href="https://www.howth.ie/" target="_blank">Sentiero panoramico sulle scogliere (percorso ad anello, circa 2 ore)</a></li>
+            <li><a href="https://www.howthcastle.ie/" target="_blank">Howth Castle &amp; Gardens</a></li>
+            <li>Porto di pescatori: foche visibili dal molo quasi ogni giorno</li>
+            <li>👟 <strong>Indispensabili</strong>: scarpe chiuse con suola scolpita e giacca antivento. Il sentiero è esposto.</li>
           </ul>
         </div>
-        
-        <div class="tour-card">
-          <div class="tour-title">📚 GIORNO 4: Shopping & Cultura</div>
-          <div class="tour-transport">🚊 DART → Pearse, poi a piedi</div>
-          <ul style="margin-top: 10px;">
-            <li><a href="https://www.stephensgreen.com/" target="_blank">St. Stephen's Green (parco centrale)</a></li>
-            <li><a href="https://www.powerscourtcentre.ie/" target="_blank">Powerscourt Centre (shopping elegante)</a></li>
-            <li><a href="https://www.graftonstreet.ie/" target="_blank">Grafton Street (shopping e buskers)</a></li>
-            <li><a href="https://www.museum.ie/en-ie/home" target="_blank">National Museum (cultura irlandese)</a></li>
-          </ul>
-        </div>
-        
-        <div class="tour-card">
-          <div class="tour-title">🏰 GIORNO 5: Gita Escursionistica</div>
-          <div class="tour-transport">🚌 Tour organizzato o Dublin Bus</div>
-          <ul style="margin-top: 10px;">
-            <li><a href="https://www.newgrange.com/" target="_blank">Newgrange (tomba neolitica UNESCO)</a></li>
-            <li><strong>OPPURE</strong></li>
-            <li><a href="https://www.wicklowmountainsnationalpark.ie/" target="_blank">Wicklow Mountains (Glendalough)</a></li>
-            <li><strong>OPPURE</strong></li>
-            <li><a href="https://www.cliffsofmoher.ie/" target="_blank">Cliffs of Moher (tour giornaliero)</a></li>
-          </ul>
-        </div>
-        
+
         <div class="tour-card" style="border: 4px solid #FF7900; background: linear-gradient(135deg, rgba(255,121,0,0.2), rgba(0,154,73,0.1)); box-shadow: 0 10px 25px rgba(255,121,0,0.3);">
-          <div class="tour-title" style="color: #FF7900; font-size: 1.4rem; font-weight: bold;">🌺 GIORNO 6: GIARDINI BOTANICI NAZIONALI 🌱</div>
-          <div style="color: #FF7900; font-weight: bold; margin: 10px 0; font-size: 1.1rem;">🎓 SPECIALE PER LA NOSTRA SCUOLA AGRARIA!</div>
+          <div class="tour-title" style="color: #FF7900; font-size: 1.35rem; font-weight: bold;">🌿 MERCOLEDÌ 30/09: Giardini Botanici Nazionali</div>
+          <div style="color: #FF7900; font-weight: bold; margin: 10px 0; font-size: 1.05rem;">🎓 L'uscita più importante per il nostro indirizzo!</div>
           <div class="tour-transport">🚊 DART → Drumcondra, poi Bus 19/19A (15 min)</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.botanicgardens.ie/" target="_blank">🌿 National Botanic Gardens Glasnevin (19 ettari di biodiversità)</a></li>
-            <li><a href="https://www.botanicgardens.ie/gspc/content/palm-house" target="_blank">🛏️ Palm House e Great Palm House (serre storiche vittoriane)</a></li>
-            <li><a href="https://www.botanicgardens.ie/discover/collections" target="_blank">🌹 Collezioni speciali: Rose Garden, Herbaceous Borders, Cactus House</a></li>
-            <li>🧑‍🌾 Workshop pratico: tecniche di coltivazione irlandesi</li>
-            <li>🌱 Studio della flora locale e metodi di conservazione</li>
-            <li>🍃 Analisi dei terreni e sistemi di irrigazione irlandesi</li>
-            <li><strong style="color: #FF7900; font-size: 1.1rem;">🌿 GIORNATA DEDICATA ALL'AGRICOLTURA SOSTENIBILE!</strong></li>
+            <li><a href="https://www.botanicgardens.ie/" target="_blank">🌱 Glasnevin: 19 ettari e oltre 15.000 specie vegetali</a></li>
+            <li><a href="https://www.botanicgardens.ie/gspc/content/palm-house" target="_blank">🏛️ Great Palm House e serre vittoriane in ferro e vetro</a></li>
+            <li><a href="https://www.botanicgardens.ie/discover/collections" target="_blank">🌹 Rose Garden, Herbaceous Borders, Cactus House</a></li>
+            <li>🥔 Qui furono studiate le patate colpite dalla <em>Great Famine</em> del 1845: storia e agraria si incontrano</li>
+            <li><strong style="color: #FF7900;">📝 Porta il quaderno: annota specie, tecniche di serra e sistemi di irrigazione.</strong></li>
+          </ul>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-title">🏛️ GIOVEDÌ 01/10: National Museum</div>
+          <div class="tour-transport">🚊 DART → Pearse Station, poi a piedi</div>
+          <ul style="margin-top: 10px;">
+            <li><a href="https://www.museum.ie/en-ie/home" target="_blank">National Museum of Ireland — Archaeology (ingresso gratuito)</a></li>
+            <li>Le <em>bog bodies</em>: corpi conservati nelle torbiere da oltre 2.000 anni</li>
+            <li>Ori preistorici e tesori celtici: una delle collezioni più ricche d'Europa</li>
+            <li>💡 A pochi passi ci sono <a href="https://www.nationalgallery.ie/" target="_blank">National Gallery</a> e <a href="https://www.stephensgreen.com/" target="_blank">St. Stephen's Green</a></li>
+          </ul>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-title">🏰 VENERDÌ 02/10: Malahide Castle</div>
+          <div class="tour-transport">🚶 A piedi dal centro di Malahide (15 min)</div>
+          <ul style="margin-top: 10px;">
+            <li><a href="https://malahidecastleandgardens.ie/" target="_blank">Castello abitato dalla famiglia Talbot per quasi 800 anni</a></li>
+            <li>🌺 <strong>Talbot Botanic Gardens</strong>: 22 ettari e la Walled Garden con specie dell'emisfero australe</li>
+            <li>Butterfly House e serre vittoriane</li>
+            <li>🧑‍🌾 Secondo appuntamento botanico della settimana: confronta le tecniche con quelle di Glasnevin</li>
+          </ul>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-title">⛰️ SABATO 03/10: Glendalough (intera giornata)</div>
+          <div class="tour-transport">🚌 Pullman — Wicklow Mountains, circa 1h30 da Dublino</div>
+          <ul style="margin-top: 10px;">
+            <li><a href="https://www.wicklowmountainsnationalpark.ie/" target="_blank">Parco Nazionale delle Wicklow Mountains</a></li>
+            <li><a href="https://glendalough.ie/" target="_blank">Insediamento monastico del VI secolo con torre rotonda di 30 metri</a></li>
+            <li>Upper e Lower Lake: sentieri lungo la valle glaciale</li>
+            <li>🎒 Giornata all'aperto: pranzo al sacco, borraccia, strati di vestiti e impermeabile. Copertura telefonica scarsa.</li>
           </ul>
         </div>
       </div>
     </section>
+
+    <section id="extra" class="card tour-extra-card">
+      <h2 data-icon="✨">Se avete tempo libero — proposte extra</h2>
+      <p style="text-align: center; font-style: italic; margin-bottom: 25px;">
+        Idee per le sere, il pomeriggio libero della domenica e i momenti non organizzati.
+        <strong>Sempre in gruppo e previo accordo con i docenti accompagnatori.</strong>
+      </p>
+
+      <div class="tour-grid">
+        <div class="tour-card">
+          <div class="tour-title">🍺 Guinness Storehouse</div>
+          <div class="tour-transport">🚊 DART → Tara St, poi Bus 13/40</div>
+          <ul style="margin-top: 10px;">
+            <li><a href="https://www.guinness-storehouse.com/" target="_blank">Sette piani nella forma di un enorme bicchiere di birra</a></li>
+            <li>Gravity Bar all'ultimo piano: vista a 360° su Dublino</li>
+            <li>Interessante per noi il piano dedicato a orzo, luppolo e fermentazione</li>
+            <li>🎟️ Biglietto a pagamento — conviene prenotarlo online in anticipo</li>
+          </ul>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-title">🚢 EPIC — Museo dell'Emigrazione</div>
+          <div class="tour-transport">🚊 DART → Connolly, poi 10 min a piedi (Docklands)</div>
+          <ul style="margin-top: 10px;">
+            <li><a href="https://epicchq.com/" target="_blank">Museo interamente digitale e interattivo, più volte eletto miglior attrazione d'Europa</a></li>
+            <li>La storia dei 10 milioni di irlandesi emigrati nel mondo</li>
+            <li>🇮🇹 Fate il parallelo con l'emigrazione italiana: è il collegamento perfetto con storia e cittadinanza</li>
+            <li>Accanto c'è la <a href="https://jeaniejohnston.ie/" target="_blank">Jeanie Johnston</a>, replica di una nave dei migranti</li>
+          </ul>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-title">⛓️ Kilmainham Gaol &amp; Phoenix Park</div>
+          <div class="tour-transport">🚌 Bus 69/79 dal centro</div>
+          <ul style="margin-top: 10px;">
+            <li><a href="https://kilmainhamgaolmuseum.ie/" target="_blank">Kilmainham Gaol: il carcere dei leader dell'indipendenza irlandese</a></li>
+            <li><a href="https://phoenixpark.ie/" target="_blank">Phoenix Park: il più grande parco urbano recintato d'Europa, con cervi in libertà</a></li>
+            <li><a href="https://www.dublinzoo.ie/" target="_blank">Dublin Zoo (dentro il parco)</a></li>
+            <li>🎟️ Kilmainham si prenota online: i posti finiscono giorni prima</li>
+          </ul>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-title">🛍️ Shopping &amp; centro città</div>
+          <div class="tour-transport">🚊 DART → Pearse o Tara Street</div>
+          <ul style="margin-top: 10px;">
+            <li><a href="https://www.graftonstreet.ie/" target="_blank">Grafton Street (negozi e artisti di strada)</a></li>
+            <li><a href="https://www.powerscourtcentre.ie/" target="_blank">Powerscourt Townhouse Centre</a></li>
+            <li><a href="https://www.henrystreet.ie/" target="_blank">Henry Street (più economica di Grafton)</a></li>
+            <li>🎁 Souvenir tipici: maglioni Aran, Claddagh ring, tè Barry's</li>
+          </ul>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-title">🎶 Musica dal vivo &amp; sport gaelici</div>
+          <div class="tour-transport">🚊 Temple Bar / DART → Drumcondra per Croke Park</div>
+          <ul style="margin-top: 10px;">
+            <li><a href="https://www.templebar.ie/" target="_blank">Sessioni di musica tradizionale nei pub di Temple Bar (anche pomeridiane)</a></li>
+            <li><a href="https://crokepark.ie/" target="_blank">Croke Park &amp; GAA Museum: hurling e football gaelico</a></li>
+            <li>L'hurling è lo sport di squadra più veloce al mondo — vale la visita anche solo per il museo</li>
+            <li>⚠️ Nei pub si entra per la musica e il cibo, non per l'alcol: siete studenti minorenni</li>
+          </ul>
+        </div>
+
+        <div class="tour-card">
+          <div class="tour-title">🌾 A due passi da Malahide</div>
+          <div class="tour-transport">🚶 A piedi o 🚌 Bus 42 / DART</div>
+          <ul style="margin-top: 10px;">
+            <li><a href="https://www.visitdublin.com/guides/things-to-do-malahide" target="_blank">Malahide Beach e passeggiata lungo il Coast Road</a></li>
+            <li><a href="https://newbridgehouseandfarm.com/" target="_blank">🐄 Newbridge House &amp; Farm a Donabate: fattoria didattica tradizionale irlandese</a></li>
+            <li>Portmarnock Beach: 5 km di sabbia, raggiungibile in bus</li>
+            <li>🌅 Il tramonto sulla marina di Malahide è il posto migliore per le foto del viaggio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
 
     <section id="mappe" class="card culture-card">
       <h2 data-icon="📍">Mappe Turistiche di Dublino</h2>
@@ -1268,6 +1478,7 @@ to{transform:rotate(360deg)}}
         <li><a href="https://www.nationalgallery.ie/" target="_blank">National Gallery (arte europea)</a></li>
         <li><a href="https://www.visitdublin.com/guides/irish-writers-tour-dublin" target="_blank">Dublin Writers Museum (letteratura irlandese)</a></li>
         <li><a href="https://www.gpomuseum.ie/" target="_blank">GPO Museum (storia dell'indipendenza)</a></li>
+        <li><a href="https://epicchq.com/" target="_blank">EPIC — The Irish Emigration Museum (museo dell'emigrazione irlandese, più volte eletto miglior attrazione d'Europa)</a></li>
         <li><a href="https://www.guinness-storehouse.com/en/home" target="_blank">Guinness Storehouse</a></li>
         <li><a href="https://www.ireland.com/it-it/cose-da-fare/attrazioni/musei-nazionali-irlanda/" target="_blank">National Museum (sito ufficiale del turismo)</a></li>
         <li><a href="https://www.kilmainhamgaolmuseum.ie/" target="_blank">Kilmainham Gaol Museum</a></li>
