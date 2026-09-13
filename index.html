@@ -4,15 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stage Linguistico — Malahide (Dublino) | Guida per studenti</title>
+  <meta name="description" content="Guida completa allo stage linguistico dell'IIS Gregorio Mendel a Malahide (Dublino), 27 settembre – 4 ottobre 2026: programma, trasporti, app, frasario, emergenze e FAQ." />
+  <meta name="theme-color" content="#009A49" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Stage Linguistico — Malahide (Dublino) 2026" />
+  <meta property="og:description" content="Programma, trasporti, frasario e consigli per lo stage in Irlanda dell'IIS Mendel." />
+  <meta property="og:image" content="assets/img-opt/IMG_20241003_121058.webp" />
+  <link rel="preload" as="image" href="assets/img-opt/IMG-20241008-WA0014.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-    
+    /* font caricato via <link> nel <head> */
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     :root {
       --irish-green: #009A49;
       --irish-orange: #FF7900;
@@ -22,7 +32,7 @@
       --text-dark: #1a1a1a;
       --text-light: #666;
     }
-    
+
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
@@ -32,54 +42,7 @@
       position: relative;
       overflow-x: hidden;
     }
-    
-    /* Background slideshow */
-    .bg-slideshow {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-    }
-    
-    .bg-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-referrer;
-      opacity: 0;
-      transition: opacity 2s ease-in-out;
-    }
-    
-    .bg-slide.active {
-      opacity: 0.3;
-    }
-    
-    .bg-slide:nth-child(1) {
-      background-image: url('https://images.unsplash.com/photo-1590736969955-71cc94901144?w=1920&h=1080&fit=crop');
-    }
-    
-    .bg-slide:nth-child(2) {
-      background-image: url('https://images.unsplash.com/photo-1549918864-48ac978761a4?w=1920&h=1080&fit=crop');
-    }
-    
-    .bg-slide:nth-child(3) {
-      background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2a88?w=1920&h=1080&fit=crop');
-    }
-    
-    .bg-slide:nth-child(4) {
-      background-image: url('https://images.unsplash.com/photo-1448388233531-f7e8b5abc346?w=1920&h=1080&fit=crop');
-    }
-    
-    .bg-slide:nth-child(5) {
-      background-image: url('https://images.unsplash.com/photo-1596395874204-8e009b989df4?w=1920&h=1080&fit=crop');
-    }
-    
+
     /* Overlay for better text readability */
     body::before {
       content: '';
@@ -88,14 +51,14 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, 
-        rgba(0,154,73,0.8) 0%, 
+      background: linear-gradient(135deg,
+        rgba(0,154,73,0.8) 0%,
         rgba(76,175,80,0.6) 25%,
         rgba(255,121,0,0.7) 75%,
         rgba(0,154,73,0.8) 100%);
       z-index: -1;
     }
-    
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -103,7 +66,7 @@
       position: relative;
       z-index: 1;
     }
-    
+
     /* Header Section */
     .header {
       text-align: center;
@@ -116,7 +79,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .header::before {
       content: '🍀';
       position: absolute;
@@ -126,7 +89,7 @@
       right: -20px;
       animation: spin 10s linear infinite;
     }
-    
+
     .header::after {
       content: '🏰';
       position: absolute;
@@ -136,12 +99,12 @@
       left: -20px;
       animation: spin 15s linear infinite reverse;
     }
-    
+
     @keyframes spin {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-    
+
     .header h1 {
       font-size: 2.5rem;
       font-weight: 700;
@@ -153,7 +116,11 @@
       position: relative;
       z-index: 2;
     }
-    
+
+    @supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+      .header h1 { -webkit-text-fill-color: initial; color: var(--dark-green); }
+    }
+
     .header p {
       font-size: 1.1rem;
       color: var(--text-light);
@@ -162,7 +129,7 @@
       position: relative;
       z-index: 2;
     }
-    
+
     /* Navigation */
     .nav {
       display: flex;
@@ -171,7 +138,7 @@
       gap: 15px;
       margin: 30px 0;
     }
-    
+
     .nav a {
       padding: 12px 24px;
       background: linear-gradient(135deg, var(--irish-white), #f0f0f0);
@@ -184,7 +151,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .nav a::before {
       content: '';
       position: absolute;
@@ -196,17 +163,17 @@
       transition: all 0.3s ease;
       z-index: -1;
     }
-    
+
     .nav a:hover::before {
       left: 0;
     }
-    
+
     .nav a:hover {
       color: white;
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0,154,73,0.3);
     }
-    
+
     /* Cards */
     .card {
       background: rgba(255,255,255,0.95);
@@ -220,7 +187,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .card::before {
       content: '';
       position: absolute;
@@ -230,12 +197,12 @@
       height: 4px;
       background: linear-gradient(90deg, var(--irish-green), var(--irish-orange));
     }
-    
+
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 25px 50px rgba(0,0,0,0.15);
     }
-    
+
     .card h2 {
       color: var(--irish-green);
       font-size: 1.8rem;
@@ -245,30 +212,30 @@
       align-items: center;
       gap: 10px;
     }
-    
+
     .card h2::before {
       content: attr(data-icon);
       font-size: 1.5em;
       animation: bounce 2s ease-in-out infinite;
     }
-    
+
     @keyframes bounce {
       0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
       40% { transform: translateY(-10px); }
       60% { transform: translateY(-5px); }
     }
-    
+
     .card ul {
       list-style: none;
       padding: 0;
     }
-    
+
     .card li {
       margin: 12px 0;
       padding-left: 25px;
       position: relative;
     }
-    
+
     .card li::before {
       content: '🍀';
       position: absolute;
@@ -276,12 +243,12 @@
       top: 0;
       animation: pulse 1.5s ease-in-out infinite;
     }
-    
+
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.2); }
     }
-    
+
     .card a {
       color: var(--irish-green);
       text-decoration: none;
@@ -289,12 +256,12 @@
       border-bottom: 2px solid transparent;
       transition: all 0.3s ease;
     }
-    
+
     .card a:hover {
       color: var(--irish-orange);
       border-bottom-color: var(--irish-orange);
     }
-    
+
     /* Special styling for different sections */
     .info-card { border-left: 5px solid var(--irish-green); }
     .transport-card { border-left: 5px solid var(--irish-orange); }
@@ -303,7 +270,7 @@
     .maps-card { border-left: 5px solid var(--irish-orange); }
     .tour-extra-card { border-left: 5px solid var(--light-green); }
     .contacts-card { border-left: 5px solid var(--light-green); }
-    
+
     /* App Store Buttons */
     .app-buttons {
       display: flex;
@@ -312,7 +279,7 @@
       margin: 15px 0;
       flex-wrap: wrap;
     }
-    
+
     .app-button {
       display: inline-block;
       padding: 12px 20px;
@@ -326,21 +293,21 @@
       min-width: 140px;
       text-align: center;
     }
-    
+
     .app-button:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       color: white;
     }
-    
+
     .app-button.ios {
       background: linear-gradient(135deg, #007AFF, #0056CC);
      color:#fff; color:#fff !important;}
-    
+
     .app-button.android {
       background: linear-gradient(135deg, #3DDC84, #34C759);
      color:#fff; color:#fff !important;}
-    
+
     /* App showcase styling */
     .app-showcase {
       display: grid;
@@ -348,7 +315,7 @@
       gap: 20px;
       margin: 20px 0;
     }
-    
+
     .app-card {
       background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,240,240,0.9));
       border: 2px solid var(--irish-green);
@@ -357,31 +324,31 @@
       text-align: center;
       transition: all 0.3s ease;
     }
-    
+
     .app-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 30px rgba(0,154,73,0.2);
     }
-    
+
     .app-icon {
       font-size: 3rem;
       margin-bottom: 15px;
       display: block;
     }
-    
+
     .app-name {
       color: var(--irish-green);
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
-    
+
     .app-description {
       color: var(--text-dark);
       margin-bottom: 15px;
       font-size: 0.95rem;
     }
-    
+
     /* Video Button Styling */
     .video-button {
       display: inline-block;
@@ -400,19 +367,19 @@
       border: none;
       cursor: pointer;
     }
-    
+
     .video-button:hover {
       transform: translateY(-3px) scale(1.05);
       box-shadow: 0 15px 35px rgba(255,121,0,0.4);
       color: white !important;
     }
-    
+
     .video-button::before {
       content: '▶️';
       font-size: 1.5rem;
       margin-right: 10px;
     }
-    
+
     /* Footer */
     .footer {
       text-align: center;
@@ -423,12 +390,12 @@
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255,255,255,0.2);
     }
-    
+
     .footer p {
       color: var(--text-light);
       font-size: 0.9rem;
     }
-    
+
     /* Irish Flag Animation */
     .irish-flag {
       position: fixed;
@@ -443,7 +410,7 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       border: 2px solid white;
     }
-    
+
     .irish-flag::before {
       content: '';
       position: absolute;
@@ -453,7 +420,7 @@
       height: 100%;
       background: #009A49;
     }
-    
+
     .irish-flag::after {
       content: '';
       position: absolute;
@@ -463,7 +430,7 @@
       height: 100%;
       background: #FF7900;
     }
-    
+
     .irish-flag-center {
       position: absolute;
       top: 0;
@@ -472,14 +439,14 @@
       height: 100%;
       background: #FFFFFF;
     }
-    
+
     @keyframes wave {
       0%, 100% { transform: rotate(0deg) scale(1); }
       25% { transform: rotate(1deg) scale(1.05); }
       50% { transform: rotate(0deg) scale(1); }
       75% { transform: rotate(-1deg) scale(1.05); }
     }
-    
+
     /* Countdown Timer */
     .countdown {
       background: linear-gradient(135deg, var(--irish-orange), #FF5722);
@@ -491,22 +458,22 @@
       font-weight: 600;
       animation: glow 2s ease-in-out infinite alternate;
     }
-    
+
     @keyframes glow {
       from { box-shadow: 0 0 20px rgba(255,121,0,0.5); }
       to { box-shadow: 0 0 30px rgba(255,121,0,0.8); }
     }
-    
+
     .countdown-text {
       font-size: 1.2rem;
       margin-bottom: 10px;
     }
-    
+
     .countdown-days {
       font-size: 2rem;
       font-weight: 700;
     }
-    
+
     /* Tour cards styling */
     .tour-grid {
       display: grid;
@@ -514,7 +481,7 @@
       gap: 20px;
       margin: 20px 0;
     }
-    
+
     .tour-card {
       background: linear-gradient(135deg, rgba(0,154,73,0.1), rgba(76,175,80,0.1));
       border: 2px solid var(--irish-green);
@@ -522,19 +489,19 @@
       padding: 20px;
       transition: all 0.3s ease;
     }
-    
+
     .tour-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 30px rgba(0,154,73,0.2);
     }
-    
+
     .tour-title {
       color: var(--irish-green);
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
-    
+
     .tour-transport {
       background: var(--irish-orange);
       color: white;
@@ -545,7 +512,7 @@
       display: inline-block;
       margin: 10px 0;
     }
-    
+
     /* FAQ styling */
     .faq-item {
       background: rgba(255,255,255,0.9);
@@ -555,7 +522,7 @@
       overflow: hidden;
       transition: all 0.3s ease;
     }
-    
+
     .faq-question {
       background: linear-gradient(135deg, var(--irish-green), var(--light-green));
       color: white;
@@ -564,17 +531,17 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    
+
     .faq-question:hover {
       background: linear-gradient(135deg, var(--dark-green), var(--irish-green));
     }
-    
+
     .faq-answer {
       padding: 20px;
       background: rgba(255,255,255,0.95);
       display: none;
     }
-    
+
     /* Phrasebook grid */
     .phrase-grid {
       display: grid;
@@ -585,21 +552,21 @@
       padding: 15px;
       border-radius: 10px;
     }
-    
+
     .phrase-grid div {
       padding: 8px;
       border-radius: 5px;
     }
-    
+
     .phrase-grid div:nth-child(odd) {
       background: rgba(0,154,73,0.1);
       font-weight: 600;
     }
-    
+
     .phrase-grid div:nth-child(even) {
       background: rgba(255,121,0,0.1);
     }
-    
+
     /* Gaelic phrases special styling */
     .gaelic-box {
       background: linear-gradient(135deg, rgba(0,154,73,0.2), rgba(255,255,255,0.9));
@@ -608,7 +575,7 @@
       padding: 20px;
       margin: 20px 0;
     }
-    
+
     .gaelic-phrase {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -618,25 +585,25 @@
       background: rgba(255,255,255,0.8);
       border-radius: 8px;
     }
-    
-    .gaelic-phrase div:nth-child(1) { 
-      background: rgba(0,154,73,0.1); 
-      font-weight: 600; 
-      padding: 8px; 
-      border-radius: 5px; 
+
+    .gaelic-phrase div:nth-child(1) {
+      background: rgba(0,154,73,0.1);
+      font-weight: 600;
+      padding: 8px;
+      border-radius: 5px;
     }
-    .gaelic-phrase div:nth-child(2) { 
-      background: rgba(255,121,0,0.1); 
-      font-style: italic; 
-      padding: 8px; 
-      border-radius: 5px; 
+    .gaelic-phrase div:nth-child(2) {
+      background: rgba(255,121,0,0.1);
+      font-style: italic;
+      padding: 8px;
+      border-radius: 5px;
     }
-    .gaelic-phrase div:nth-child(3) { 
-      background: rgba(76,175,80,0.1); 
-      padding: 8px; 
-      border-radius: 5px; 
+    .gaelic-phrase div:nth-child(3) {
+      background: rgba(76,175,80,0.1);
+      padding: 8px;
+      border-radius: 5px;
     }
-    
+
     /* Emergency contact styling */
     .emergency-box {
       background: linear-gradient(135deg, #FF5722, var(--irish-orange));
@@ -647,13 +614,13 @@
       text-align: center;
       font-weight: 600;
     }
-    
+
     .emergency-number {
       font-size: 2rem;
       font-weight: 700;
       margin: 10px 0;
     }
-    
+
     /* Responsive Design */
     @media (max-width: 768px) {
       .header h1 { font-size: 2rem; }
@@ -667,197 +634,27 @@
       .app-showcase { grid-template-columns: 1fr; }
       .app-buttons { flex-direction: column; align-items: center; }
     }
-  
-/* --- Media buttons (standardized) --- */
-.button-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;align-items:stretch;justify-items:center;margin-top:16px}
-.video-button,.media-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:12px;font-weight:700;font-size:1.02rem;text-decoration:none;color:#fff;transition:.25s;border:none;cursor:pointer;box-shadow:0 8px 18px rgba(0,0,0,.12);min-height:56px;text-align:center color:#fff; color:#fff !important; border-radius:12px; padding:14px 18px; color:#fff !important; color:#fff !important;}
-.video-button{background:linear-gradient(135deg,#FF7900,#FF5722)}
-.video-button:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(255,121,0,.28)}
-.media-button{background:linear-gradient(135deg,#1DB954,#1AA34A)}
-.media-button:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(29,185,84,.28)}
-.media-icon{display:inline-block;width:20px;height:20px}
 
-/* --- Normalize button proportions --- */
-.button-row a {
-  flex: 1 1 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60px;
-  text-align: center;
-}
-.button-row {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-/* --- Background gallery (two-layer crossfade) --- */
+/* --- Galleria di sfondo (crossfade a due livelli) --- */
 .bg-slideshow{position:fixed;inset:0;z-index:-2;overflow:hidden}
 .bg-layer{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.8s ease}
 .bg-layer.show{opacity:.35}
-@media (prefers-reduced-motion: reduce){
-  .bg-layer{transition:none}
-}
 
-/* Replace rotating clover decorations with SVGs */
-.header .clovers{position:absolute;top:8px;right:8px;display:flex;gap:8px;z-index:2}
-.header .clovers svg{width:36px;height:36px;animation:spin 10s linear infinite}
-.header .clovers svg.orange{animation-direction:reverse}
-@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-
-/* --- Media buttons proportions (equal) --- */
-.button-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media (max-width: 760px){ .button-row{grid-template-columns:1fr} }
-.button-row a{min-height:60px;display:flex;justify-content:center;align-items:center;padding:14px 18px}
-
-/* Single leading icon for CTA buttons */
-.btn-icon{display:inline-block;margin-right:8px;font-weight:700;line-height:1}
-.btn-text{display:inline-block}
-
-to{transform:rotate(360deg)}}
-
-/* Rotating clover (emoji) */
+/* --- Trifoglio decorativo header --- */
 .header{position:relative;overflow:hidden}
-.header::before{
-  content:'🍀';
-  position:absolute;
-  top:-20px;
-  right:-20px;
-  font-size:90px;
-  opacity:.12;
-  animation:spin 12s linear infinite;
-  pointer-events:none;
-}
-/* Remove any secondary after-decoration */
+.header::before{content:'🍀';position:absolute;top:-20px;right:-20px;font-size:90px;opacity:.12;animation:spin 12s linear infinite;pointer-events:none}
 .header::after{content:none}
 
-/* === Equal-sized media buttons & wrapping === */
-.button-row{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  align-items:stretch;
-}
-@media (max-width:780px){
-  .button-row{ grid-template-columns:1fr; }
-}
-.button-row a{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:14px 18px;
-  min-height:68px;   /* equal visual height */
-  height:100%;
-  border-radius:12px;
-  line-height:1.2;
-  white-space:normal;         /* allow wrapping */
-  overflow-wrap:anywhere;     /* break long words if needed */
-  word-break:break-word;      /* extra safety */
-}
-/* normalize inner spans */
-.button-row a span{ display:inline; }
-
-/* --- Force equal alignment for bottom buttons --- */
-.button-row{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  align-items:stretch;
-}
-@media (max-width:780px){
-  .button-row{ grid-template-columns:1fr; }
-}
-.button-row a{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:14px 18px;
-  min-height:80px;   /* enforce taller equal size */
-  height:100%;
-  border-radius:12px;
-  line-height:1.3;
-  white-space:normal;
-  overflow-wrap:anywhere;
-  word-break:break-word;
-}
-
-/* === Override: uniform media buttons === */
-.button-row{display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:16px;align-items:stretch}
-.button-row a{width:100%;display:flex;justify-content:center;align-items:center;min-height:64px;text-align:center;white-space:normal;line-height:1.15}
-@media (max-width: 820px){.button-row{grid-template-columns:1fr !important}}
-
-/* === Uniforma e allinea i tre pulsanti (Video / Irlandando / Spotify) === */
-.button-row{
-  display:grid !important;
-  grid-template-columns:repeat(3,1fr) !important;
-  gap:16px; align-items:stretch;
-}
-@media (max-width:820px){
-  .button-row{ grid-template-columns:1fr !important; }
-}
-.button-row a{
-  display:flex; flex-direction:column;
-  justify-content:center; align-items:center;
-  text-align:center; white-space:normal;
-  overflow-wrap:anywhere; word-break:break-word;
-  min-height:56px; padding:10px 14px;
-  line-height:1.2; border-radius:10px;
-  height:100%;
-}
-
-/* Hotfix: centratura perfetta dei tre pulsanti media */
-.button-row a{display:grid;place-items:center}
-
-/* Strong alignment fix: make the three media buttons identical in box metrics */
-.button-row{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:16px;align-items:stretch}
-@media (max-width:820px){.button-row{grid-template-columns:1fr !important}}
-.button-row a{
-  box-sizing:border-box !important;
-  display:flex !important;
-  flex-direction:column !important;
-  align-items:center !important;
-  justify-content:center !important;
-  text-align:center !important;
-  padding:10px 14px !important;
-  min-height:60px !important;
-  height:100% !important;
-  line-height:1.2 !important;
-  white-space:normal !important;
-  overflow-wrap:anywhere !important;
-  word-break:break-word !important;
-  border-radius:10px !important;
-  font-size:.95rem !important;
-  font-weight:700 !important;
-}
-/* Normalize inner elements */
-.button-row a small{display:block;margin-top:2px}
-/* Ensure media-button doesn't override padding/height */
-.button-row .media-button{padding:10px 14px !important;min-height:60px !important;height:100% !important;display:flex !important;align-items:center !important;justify-content:center !important;flex-direction:column !important}
-
-/* >>> Uniform media-pill buttons: identical height/centering <<< */
-#risorse .button-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
-@media (max-width:820px){#risorse .button-row{grid-template-columns:1fr}}
-#risorse .button-row .media-pill{
-  display:grid; grid-auto-flow:row; place-items:center;
-  height:64px; padding:0 12px;
-  border-radius:10px; text-align:center;
-  color:#fff; font-weight:700; font-size:.95rem; line-height:1.1;
-  white-space:normal; overflow-wrap:anywhere; word-break:break-word;
-  box-shadow:0 4px 12px rgba(0,0,0,.08); transition:transform .16s, box-shadow .16s;
-}
-#risorse .button-row .media-pill:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,0,0,.12)}
-#risorse .button-row .media-pill .icon{display:block;line-height:1;margin-bottom:2px}
-#risorse .button-row .media-pill .label{display:block}
-#risorse .button-row .media-pill .label small{display:block;margin-top:2px;font-weight:600;opacity:.9}
-
-/* Theme variants */
-#risorse .button-row .media-pill.video,
-#risorse .button-row .media-pill.guide{background:linear-gradient(135deg,#FF7900,#FF5722)}
-#risorse .button-row .media-pill.spotify{background:linear-gradient(135deg,#1DB954,#1AA34A);color:#fff !important}
+/* --- Pulsanti media (definizione unica) --- */
+.button-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch;margin-top:16px}
+@media (max-width:820px){.button-row{grid-template-columns:1fr}}
+.button-row .media-pill{display:grid;place-items:center;min-height:64px;padding:10px 14px;border-radius:10px;text-align:center;text-decoration:none;color:#fff;font-weight:700;font-size:.95rem;line-height:1.2;white-space:normal;overflow-wrap:anywhere;box-shadow:0 4px 12px rgba(0,0,0,.12);transition:transform .16s,box-shadow .16s}
+.button-row .media-pill:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,0,0,.2);color:#fff}
+.button-row .media-pill .icon{display:block;line-height:1;margin-bottom:2px}
+.button-row .media-pill .label{display:block}
+.button-row .media-pill .label small{display:block;margin-top:2px;font-weight:600;opacity:.92}
+.button-row .media-pill.video,.button-row .media-pill.guide{background:linear-gradient(135deg,#FF7900,#FF5722)}
+.button-row .media-pill.spotify{background:linear-gradient(135deg,#1DB954,#1AA34A)}
 
     /* ===== AGGIUNTE 2026: player, progress bar, reveal, back-to-top ===== */
     .date-badge {
@@ -1030,23 +827,69 @@ to{transform:rotate(360deg)}}
     body { padding-bottom: 110px; }
     @media (max-width: 600px) { body { padding-bottom: 120px; } }
 
+    /* Badge scuola */
+    .badge-mendel {
+      display: inline-block; margin-bottom: 14px; padding: 6px 18px;
+      border-radius: 50px; background: var(--dark-green); color: #fff;
+      font-weight: 700; letter-spacing: 2px; font-size: .78rem;
+      position: relative; z-index: 2;
+    }
+
+    /* FAQ accessibili (details/summary) */
+    details.faq-item > summary.faq-question {
+      list-style: none; display: flex; align-items: center;
+      justify-content: space-between; gap: 12px;
+    }
+    details.faq-item > summary.faq-question::-webkit-details-marker { display: none; }
+    details.faq-item > summary.faq-question::after { content: '+'; font-size: 1.4rem; line-height: 1; flex: 0 0 auto; }
+    details.faq-item[open] > summary.faq-question::after { content: '–'; }
+    details.faq-item > .faq-answer { display: block; }
+    summary:focus-visible, a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--irish-orange); outline-offset: 3px;
+    }
+
+    /* Ancore: scorrimento nativo, senza JS */
+    html { scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 24px; }
+
+    /* Movimento ridotto */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important; animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+      }
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    }
+
+    /* Stampa */
+    @media print {
+      body { background: #fff !important; padding: 0; color: #000; }
+      body::before, .bg-slideshow, .music-player, #backToTop, .read-progress,
+      .irish-flag, .nav, .video-embed, .countdown { display: none !important; }
+      .card, .header, .footer {
+        background: #fff !important; box-shadow: none !important;
+        border: 1px solid #ccc; break-inside: avoid; backdrop-filter: none;
+      }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      details.faq-item > .faq-answer { display: block !important; }
+      .header h1 { -webkit-text-fill-color: initial; color: #006B33; }
+      a { color: #006B33; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .72em; word-break: break-all; }
+    }
+
 </style>
 </head>
 <body>
-  <div class="bg-slideshow">
+  <div class="bg-slideshow" aria-hidden="true">
     <div class="bg-layer" id="slide-a"></div>
     <div class="bg-layer" id="slide-b"></div>
   </div>
-    <div class="bg-slide"></div>
-    <div class="bg-slide"></div>
-    <div class="bg-slide"></div>
-    <div class="bg-slide"></div>
-  </div>
 
-  <div class="irish-flag">
+  <div class="irish-flag" aria-hidden="true">
     <div class="irish-flag-center"></div>
   </div>
-  
+
   <div class="container">
     <header class="header">
       <div class="badge-mendel">IIS MENDEL</div>
@@ -1055,7 +898,7 @@ to{transform:rotate(360deg)}}
       <div class="date-badge">📅 27 settembre – 4 ottobre 2026</div>
 
       <p>La tua avventura irlandese ti aspetta! Guida completa per una settimana indimenticabile di studio e scoperte a Malahide.</p>
-      
+
       <div class="countdown">
         <div class="countdown-text">🎒 Partenza tra:</div>
         <div class="countdown-days">Calcolo in corso...</div>
@@ -1069,7 +912,7 @@ to{transform:rotate(360deg)}}
       <a href="#apps">📱 App</a>
       <a href="#mangiare">🍽️ Mangiare</a>
       <a href="#tour">🗺️ Uscite</a>
-      <a href="#extra">✨ Tempo libero</a>
+      <a href="#extra">✨ Proposte extra</a>
       <a href="#mappe">📍 Mappe</a>
       <a href="#tempo-libero">🏰 Cultura</a>
       <a href="#frasario">💬 Frasario</a>
@@ -1082,9 +925,9 @@ to{transform:rotate(360deg)}}
     <section id="info" class="card info-card">
       <h2 data-icon="🎓">Informazioni generali</h2>
       <p><strong>📍 Località:</strong> Malahide (Dublin Area), Irlanda<br>
-         <strong>🏫 Scuola:</strong> <a href="https://www.iceireland.com/" target="_blank">Irish College of English — ICE</a><br>
-         <strong>🌍 Turismo ufficiale:</strong> <a href="https://www.ireland.com/it-it/" target="_blank">Visit Ireland Italia</a><br>
-         <strong>📄</strong> <a href="https://agrariomendel.edu.it/allegati/all/5824-stage-irlanda-manifesto-poster-a3-verticale-compressed.pdf" target="_blank">Scarica manifesto completo (PDF)</a>
+         <strong>🏫 Scuola:</strong> <a href="https://www.iceireland.com/" target="_blank" rel="noopener">Irish College of English — ICE</a><br>
+         <strong>🌍 Turismo ufficiale:</strong> <a href="https://www.ireland.com/it-it/" target="_blank" rel="noopener">Visit Ireland Italia</a><br>
+         <strong>📄</strong> <a href="https://agrariomendel.edu.it/allegati/all/5824-stage-irlanda-manifesto-poster-a3-verticale-compressed.pdf" target="_blank" rel="noopener">Scarica manifesto completo (PDF)</a>
       </p>
     </section>
 
@@ -1164,7 +1007,7 @@ to{transform:rotate(360deg)}}
       </div>
 
       <p style="margin-top: 20px; font-size: .95rem;">
-        🎓 <strong>Lezioni:</strong> dal lunedì al venerdì, 9.00 – 12.00 presso l'<a href="https://www.iceireland.com/" target="_blank">Irish College of English</a> di Malahide.<br>
+        🎓 <strong>Lezioni:</strong> dal lunedì al venerdì, 9.00 – 12.00 presso l'<a href="https://www.iceireland.com/" target="_blank" rel="noopener">Irish College of English</a> di Malahide.<br>
         🌿 <strong>Nota per la nostra scuola:</strong> la visita ai Giardini Botanici Nazionali di mercoledì è il collegamento diretto con l'indirizzo agrario — arrivate con qualche domanda pronta!
       </p>
     </section>
@@ -1172,29 +1015,29 @@ to{transform:rotate(360deg)}}
     <section id="trasporti" class="card transport-card">
       <h2 data-icon="🚊">Trasporti</h2>
       <ul>
-        <li><a href="https://www.irishrail.ie/" target="_blank">DART — Irish Rail (treno veloce costiero)</a></li>
-        <li><a href="https://www.luas.ie/" target="_blank">LUAS (tram moderno di Dublino)</a></li>
-        <li><a href="https://www.dublinbus.ie/home" target="_blank">Dublin Bus (autobus urbani)</a></li>
-        <li><a href="https://www.transportforireland.ie/plan-a-journey/" target="_blank">TFI Journey Planner (pianifica il viaggio)</a></li>
-        <li><a href="https://moovitapp.com" target="_blank">Moovit (app navigazione trasporti)</a></li>
-        <li><a href="https://www.transportforireland.ie/tfi-go/" target="_blank">TFI Go (app ufficiale trasporti irlandesi)</a></li>
+        <li><a href="https://www.irishrail.ie/" target="_blank" rel="noopener">DART — Irish Rail (treno veloce costiero)</a></li>
+        <li><a href="https://www.luas.ie/" target="_blank" rel="noopener">LUAS (tram moderno di Dublino)</a></li>
+        <li><a href="https://www.dublinbus.ie/home" target="_blank" rel="noopener">Dublin Bus (autobus urbani)</a></li>
+        <li><a href="https://www.transportforireland.ie/plan-a-journey/" target="_blank" rel="noopener">TFI Journey Planner (pianifica il viaggio)</a></li>
+        <li><a href="https://moovitapp.com" target="_blank" rel="noopener">Moovit (app navigazione trasporti)</a></li>
+        <li><a href="https://www.transportforireland.ie/tfi-go/" target="_blank" rel="noopener">TFI Go (app ufficiale trasporti irlandesi)</a></li>
       </ul>
     </section>
 
     <section id="apps" class="card transport-card">
-      <h2 data-icon="📱">Contatti</h2>
+      <h2 data-icon="📱">App utili da scaricare</h2>
       <p style="text-align: center; font-style: italic; margin-bottom: 25px;">
         Scarica queste app PRIMA di partire per avere tutto sempre a portata di mano!
       </p>
-      
+
       <div class="app-showcase">
         <div class="app-card">
           <div class="app-icon">🚊</div>
           <div class="app-name">TFI Go</div>
           <div class="app-description">App ufficiale per tutti i trasporti irlandesi. Orari in tempo reale, percorsi e biglietti digitali.</div>
           <div class="app-buttons">
-            <a href="https://apps.apple.com/ie/app/tfi-go/id1447191945" target="_blank" class="app-button ios">📱 iOS</a>
-            <a href="https://play.google.com/store/apps/details?id=com.tfi.go" target="_blank" class="app-button android">🤖 Android</a>
+            <a href="https://apps.apple.com/ie/app/tfi-go/id1447191945" target="_blank" rel="noopener" class="app-button ios">📱 iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.tfi.go" target="_blank" rel="noopener" class="app-button android">🤖 Android</a>
           </div>
         </div>
 
@@ -1203,8 +1046,8 @@ to{transform:rotate(360deg)}}
           <div class="app-name">Moovit</div>
           <div class="app-description">Navigazione trasporti pubblici con GPS. Ti dice esattamente quando arriva il prossimo autobus/treno.</div>
           <div class="app-buttons">
-            <a href="https://apps.apple.com/app/moovit-your-local-transit-app/id498477945" target="_blank" class="app-button ios">📱 iOS</a>
-            <a href="https://play.google.com/store/apps/details?id=com.tranzmate" target="_blank" class="app-button android">🤖 Android</a>
+            <a href="https://apps.apple.com/app/moovit-your-local-transit-app/id498477945" target="_blank" rel="noopener" class="app-button ios">📱 iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.tranzmate" target="_blank" rel="noopener" class="app-button android">🤖 Android</a>
           </div>
         </div>
 
@@ -1213,8 +1056,8 @@ to{transform:rotate(360deg)}}
           <div class="app-name">Google Translate</div>
           <div class="app-description">Traduttore con funzione OFFLINE e fotocamera per tradurre cartelli e menù istantaneamente.</div>
           <div class="app-buttons">
-            <a href="https://apps.apple.com/app/google-translate/id414706506" target="_blank" class="app-button ios">📱 iOS</a>
-            <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.translate" target="_blank" class="app-button android">🤖 Android</a>
+            <a href="https://apps.apple.com/app/google-translate/id414706506" target="_blank" rel="noopener" class="app-button ios">📱 iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.translate" target="_blank" rel="noopener" class="app-button android">🤖 Android</a>
           </div>
         </div>
 
@@ -1223,8 +1066,8 @@ to{transform:rotate(360deg)}}
           <div class="app-name">Citymapper</div>
           <div class="app-description">Navigazione urbana specifica per Dublino. Calcola il percorso più veloce combinando tutti i mezzi.</div>
           <div class="app-buttons">
-            <a href="https://apps.apple.com/app/citymapper-transit-navigation/id469463298" target="_blank" class="app-button ios">📱 iOS</a>
-            <a href="https://play.google.com/store/apps/details?id=com.citymapper.app.release" target="_blank" class="app-button android">🤖 Android</a>
+            <a href="https://apps.apple.com/app/citymapper-transit-navigation/id469463298" target="_blank" rel="noopener" class="app-button ios">📱 iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.citymapper.app.release" target="_blank" rel="noopener" class="app-button android">🤖 Android</a>
           </div>
         </div>
 
@@ -1233,8 +1076,8 @@ to{transform:rotate(360deg)}}
           <div class="app-name">Leap Top-Up</div>
           <div class="app-description">Ricarica la tua Leap Card (tessera trasporti) direttamente dal telefono. Molto comodo!</div>
           <div class="app-buttons">
-            <a href="https://apps.apple.com/ie/app/leap-top-up/id885260355" target="_blank" class="app-button ios">📱 iOS</a>
-            <a href="https://play.google.com/store/apps/details?id=com.leapcard.topup" target="_blank" class="app-button android">🤖 Android</a>
+            <a href="https://apps.apple.com/ie/app/leap-top-up/id885260355" target="_blank" rel="noopener" class="app-button ios">📱 iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.leapcard.topup" target="_blank" rel="noopener" class="app-button android">🤖 Android</a>
           </div>
         </div>
 
@@ -1243,8 +1086,8 @@ to{transform:rotate(360deg)}}
           <div class="app-name">Met Éireann</div>
           <div class="app-description">Meteo ufficiale irlandese. Essenziale per sapere quando pioverà (spoiler: spesso!).</div>
           <div class="app-buttons">
-            <a href="https://apps.apple.com/ie/app/met-%C3%A9ireann/id1041006538" target="_blank" class="app-button ios">📱 iOS</a>
-            <a href="https://play.google.com/store/apps/details?id=ie.gov.met" target="_blank" class="app-button android">🤖 Android</a>
+            <a href="https://apps.apple.com/ie/app/met-%C3%A9ireann/id1041006538" target="_blank" rel="noopener" class="app-button ios">📱 iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=ie.gov.met" target="_blank" rel="noopener" class="app-button android">🤖 Android</a>
           </div>
         </div>
 
@@ -1253,8 +1096,8 @@ to{transform:rotate(360deg)}}
           <div class="app-name">Revolut</div>
           <div class="app-description">Carta prepagata perfetta per viaggi. Cambi vantaggiosi e nessuna commissione in Europa.</div>
           <div class="app-buttons">
-            <a href="https://apps.apple.com/app/revolut/id932493382" target="_blank" class="app-button ios">📱 iOS</a>
-            <a href="https://play.google.com/store/apps/details?id=com.revolut.revolut" target="_blank" class="app-button android">🤖 Android</a>
+            <a href="https://apps.apple.com/app/revolut/id932493382" target="_blank" rel="noopener" class="app-button ios">📱 iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.revolut.revolut" target="_blank" rel="noopener" class="app-button android">🤖 Android</a>
           </div>
         </div>
 
@@ -1263,8 +1106,8 @@ to{transform:rotate(360deg)}}
           <div class="app-name">What3Words</div>
           <div class="app-description">Localizza qualsiasi posto con 3 parole. Utile per comunicare indirizzi esatti alle famiglie.</div>
           <div class="app-buttons">
-            <a href="https://apps.apple.com/app/what3words/id657878530" target="_blank" class="app-button ios">📱 iOS</a>
-            <a href="https://play.google.com/store/apps/details?id=com.what3words.android" target="_blank" class="app-button android">🤖 Android</a>
+            <a href="https://apps.apple.com/app/what3words/id657878530" target="_blank" rel="noopener" class="app-button ios">📱 iOS</a>
+            <a href="https://play.google.com/store/apps/details?id=com.what3words.android" target="_blank" rel="noopener" class="app-button android">🤖 Android</a>
           </div>
         </div>
       </div>
@@ -1276,22 +1119,22 @@ to{transform:rotate(360deg)}}
 
     <section id="mangiare" class="card food-card">
       <h2 data-icon="🥘">Mangiare & Spesa</h2>
-      
+
       <h3 style="color: var(--irish-green); margin: 20px 0 15px 0; font-size: 1.3rem;">🍽️ Ristoranti e Pub a Malahide:</h3>
       <ul>
-        <li><a href="https://gibneysofmalahide.com/" target="_blank">Gibney's Malahide (pub tradizionale con ottimo fish & chips)</a></li>
-        <li><a href="https://www.kinarakitchen.ie/" target="_blank">Kinara Kitchen (cucina indiana di qualità)</a></li>
-        <li><a href="https://www.tripadvisor.it/Restaurants-g212508-Malahide_County_Dublin.html" target="_blank">TripAdvisor Malahide (recensioni ristoranti)</a></li>
+        <li><a href="https://gibneysofmalahide.com/" target="_blank" rel="noopener">Gibney's Malahide (pub tradizionale con ottimo fish & chips)</a></li>
+        <li><a href="https://www.kinarakitchen.ie/" target="_blank" rel="noopener">Kinara Kitchen (cucina indiana di qualità)</a></li>
+        <li><a href="https://www.tripadvisor.it/Restaurants-g212508-Malahide_County_Dublin.html" target="_blank" rel="noopener">TripAdvisor Malahide (recensioni ristoranti)</a></li>
       </ul>
-      
+
       <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">🛒 Supermercati e Shopping:</h3>
       <ul>
-        <li><a href="https://www.tesco.ie/store-locator/dublin/unit-2-the-green?srsltid=AfmBOopQVzE6NzWgQaI1dJXBeomqjXGkTbiQD9pQs9ZhT1QKGgkLYJ8Y" target="_blank">Tesco Malahide (supermercato principale)</a></li>
-        <li><a href="https://supervalu.ie/" target="_blank">SuperValu (catena irlandese, prodotti locali)</a></li>
-        <li><a href="https://www.dunnes.com/" target="_blank">Dunnes Stores (abbigliamento e alimentari)</a></li>
-        <li><a href="https://www.lidl.ie/" target="_blank">Lidl Ireland (discount, prezzi convenienti)</a></li>
+        <li><a href="https://www.tesco.ie/store-locator/dublin/unit-2-the-green?srsltid=AfmBOopQVzE6NzWgQaI1dJXBeomqjXGkTbiQD9pQs9ZhT1QKGgkLYJ8Y" target="_blank" rel="noopener">Tesco Malahide (supermercato principale)</a></li>
+        <li><a href="https://supervalu.ie/" target="_blank" rel="noopener">SuperValu (catena irlandese, prodotti locali)</a></li>
+        <li><a href="https://www.dunnes.com/" target="_blank" rel="noopener">Dunnes Stores (abbigliamento e alimentari)</a></li>
+        <li><a href="https://www.lidl.ie/" target="_blank" rel="noopener">Lidl Ireland (discount, prezzi convenienti)</a></li>
       </ul>
-      
+
       <h3 style="color: var(--light-green); margin: 25px 0 15px 0; font-size: 1.3rem;">🥧 Specialità Irlandesi da Provare:</h3>
       <p>🥔 <strong>Irish Stew</strong> (stufato di agnello con patate)<br>
          🟠 <strong>Fish & Chips</strong> (pesce fritto con patatine)<br>
@@ -1313,11 +1156,11 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">🏙️ LUNEDÌ 28/09: Dublin City Tour</div>
           <div class="tour-transport">🚊 DART Malahide → Connolly (30 min)</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.tcd.ie/visitors/book-of-kells/" target="_blank">Trinity College &amp; Book of Kells (manoscritto miniato dell'800 d.C.)</a></li>
-            <li><a href="https://www.dublincastle.ie/" target="_blank">Dublin Castle (sede del potere britannico fino al 1922)</a></li>
-            <li><a href="https://christchurchcathedral.ie/" target="_blank">Christ Church Cathedral</a></li>
-            <li><a href="https://www.templebar.ie/" target="_blank">Temple Bar (quartiere dei pub e della musica dal vivo)</a></li>
-            <li>💡 Guarda l'<a href="https://www.gpomuseum.ie/" target="_blank">insurrezione del 1916</a> prima di partire: capirai molto di più i monumenti di O'Connell Street</li>
+            <li><a href="https://www.tcd.ie/visitors/book-of-kells/" target="_blank" rel="noopener">Trinity College &amp; Book of Kells (manoscritto miniato dell'800 d.C.)</a></li>
+            <li><a href="https://www.dublincastle.ie/" target="_blank" rel="noopener">Dublin Castle (sede del potere britannico fino al 1922)</a></li>
+            <li><a href="https://christchurchcathedral.ie/" target="_blank" rel="noopener">Christ Church Cathedral</a></li>
+            <li><a href="https://www.templebar.ie/" target="_blank" rel="noopener">Temple Bar (quartiere dei pub e della musica dal vivo)</a></li>
+            <li>💡 Guarda l'<a href="https://www.gpomuseum.ie/" target="_blank" rel="noopener">insurrezione del 1916</a> prima di partire: capirai molto di più i monumenti di O'Connell Street</li>
           </ul>
         </div>
 
@@ -1325,8 +1168,8 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">🌊 MARTEDÌ 29/09: Howth Cliff Walk</div>
           <div class="tour-transport">🚌 Bus 42 (20 min) o DART (25 min) da Malahide</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.howth.ie/" target="_blank">Sentiero panoramico sulle scogliere (percorso ad anello, circa 2 ore)</a></li>
-            <li><a href="https://www.howthcastle.ie/" target="_blank">Howth Castle &amp; Gardens</a></li>
+            <li><a href="https://www.howth.ie/" target="_blank" rel="noopener">Sentiero panoramico sulle scogliere (percorso ad anello, circa 2 ore)</a></li>
+            <li><a href="https://www.howthcastle.ie/" target="_blank" rel="noopener">Howth Castle &amp; Gardens</a></li>
             <li>Porto di pescatori: foche visibili dal molo quasi ogni giorno</li>
             <li>👟 <strong>Indispensabili</strong>: scarpe chiuse con suola scolpita e giacca antivento. Il sentiero è esposto.</li>
           </ul>
@@ -1337,9 +1180,9 @@ to{transform:rotate(360deg)}}
           <div style="color: #FF7900; font-weight: bold; margin: 10px 0; font-size: 1.05rem;">🎓 L'uscita più importante per il nostro indirizzo!</div>
           <div class="tour-transport">🚊 DART → Drumcondra, poi Bus 19/19A (15 min)</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.botanicgardens.ie/" target="_blank">🌱 Glasnevin: 19 ettari e oltre 15.000 specie vegetali</a></li>
-            <li><a href="https://www.botanicgardens.ie/gspc/content/palm-house" target="_blank">🏛️ Great Palm House e serre vittoriane in ferro e vetro</a></li>
-            <li><a href="https://www.botanicgardens.ie/discover/collections" target="_blank">🌹 Rose Garden, Herbaceous Borders, Cactus House</a></li>
+            <li><a href="https://www.botanicgardens.ie/" target="_blank" rel="noopener">🌱 Glasnevin: 19 ettari e oltre 15.000 specie vegetali</a></li>
+            <li><a href="https://www.botanicgardens.ie/gspc/content/palm-house" target="_blank" rel="noopener">🏛️ Great Palm House e serre vittoriane in ferro e vetro</a></li>
+            <li><a href="https://www.botanicgardens.ie/discover/collections" target="_blank" rel="noopener">🌹 Rose Garden, Herbaceous Borders, Cactus House</a></li>
             <li>🥔 Qui furono studiate le patate colpite dalla <em>Great Famine</em> del 1845: storia e agraria si incontrano</li>
             <li><strong style="color: #FF7900;">📝 Porta il quaderno: annota specie, tecniche di serra e sistemi di irrigazione.</strong></li>
           </ul>
@@ -1349,10 +1192,10 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">🏛️ GIOVEDÌ 01/10: National Museum</div>
           <div class="tour-transport">🚊 DART → Pearse Station, poi a piedi</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.museum.ie/en-ie/home" target="_blank">National Museum of Ireland — Archaeology (ingresso gratuito)</a></li>
+            <li><a href="https://www.museum.ie/en-ie/home" target="_blank" rel="noopener">National Museum of Ireland — Archaeology (ingresso gratuito)</a></li>
             <li>Le <em>bog bodies</em>: corpi conservati nelle torbiere da oltre 2.000 anni</li>
             <li>Ori preistorici e tesori celtici: una delle collezioni più ricche d'Europa</li>
-            <li>💡 A pochi passi ci sono <a href="https://www.nationalgallery.ie/" target="_blank">National Gallery</a> e <a href="https://www.stephensgreen.com/" target="_blank">St. Stephen's Green</a></li>
+            <li>💡 A pochi passi ci sono <a href="https://www.nationalgallery.ie/" target="_blank" rel="noopener">National Gallery</a> e <a href="https://www.stephensgreen.com/" target="_blank" rel="noopener">St. Stephen's Green</a></li>
           </ul>
         </div>
 
@@ -1360,7 +1203,7 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">🏰 VENERDÌ 02/10: Malahide Castle</div>
           <div class="tour-transport">🚶 A piedi dal centro di Malahide (15 min)</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://malahidecastleandgardens.ie/" target="_blank">Castello abitato dalla famiglia Talbot per quasi 800 anni</a></li>
+            <li><a href="https://malahidecastleandgardens.ie/" target="_blank" rel="noopener">Castello abitato dalla famiglia Talbot per quasi 800 anni</a></li>
             <li>🌺 <strong>Talbot Botanic Gardens</strong>: 22 ettari e la Walled Garden con specie dell'emisfero australe</li>
             <li>Butterfly House e serre vittoriane</li>
             <li>🧑‍🌾 Secondo appuntamento botanico della settimana: confronta le tecniche con quelle di Glasnevin</li>
@@ -1371,8 +1214,8 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">⛰️ SABATO 03/10: Glendalough (intera giornata)</div>
           <div class="tour-transport">🚌 Pullman — Wicklow Mountains, circa 1h30 da Dublino</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.wicklowmountainsnationalpark.ie/" target="_blank">Parco Nazionale delle Wicklow Mountains</a></li>
-            <li><a href="https://glendalough.ie/" target="_blank">Insediamento monastico del VI secolo con torre rotonda di 30 metri</a></li>
+            <li><a href="https://www.wicklowmountainsnationalpark.ie/" target="_blank" rel="noopener">Parco Nazionale delle Wicklow Mountains</a></li>
+            <li><a href="https://glendalough.ie/" target="_blank" rel="noopener">Insediamento monastico del VI secolo con torre rotonda di 30 metri</a></li>
             <li>Upper e Lower Lake: sentieri lungo la valle glaciale</li>
             <li>🎒 Giornata all'aperto: pranzo al sacco, borraccia, strati di vestiti e impermeabile. Copertura telefonica scarsa.</li>
           </ul>
@@ -1392,7 +1235,7 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">🍺 Guinness Storehouse</div>
           <div class="tour-transport">🚊 DART → Tara St, poi Bus 13/40</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.guinness-storehouse.com/" target="_blank">Sette piani nella forma di un enorme bicchiere di birra</a></li>
+            <li><a href="https://www.guinness-storehouse.com/" target="_blank" rel="noopener">Sette piani nella forma di un enorme bicchiere di birra</a></li>
             <li>Gravity Bar all'ultimo piano: vista a 360° su Dublino</li>
             <li>Interessante per noi il piano dedicato a orzo, luppolo e fermentazione</li>
             <li>🎟️ Biglietto a pagamento — conviene prenotarlo online in anticipo</li>
@@ -1403,10 +1246,10 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">🚢 EPIC — Museo dell'Emigrazione</div>
           <div class="tour-transport">🚊 DART → Connolly, poi 10 min a piedi (Docklands)</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://epicchq.com/" target="_blank">Museo interamente digitale e interattivo, più volte eletto miglior attrazione d'Europa</a></li>
+            <li><a href="https://epicchq.com/" target="_blank" rel="noopener">Museo interamente digitale e interattivo, più volte eletto miglior attrazione d'Europa</a></li>
             <li>La storia dei 10 milioni di irlandesi emigrati nel mondo</li>
             <li>🇮🇹 Fate il parallelo con l'emigrazione italiana: è il collegamento perfetto con storia e cittadinanza</li>
-            <li>Accanto c'è la <a href="https://jeaniejohnston.ie/" target="_blank">Jeanie Johnston</a>, replica di una nave dei migranti</li>
+            <li>Accanto c'è la <a href="https://jeaniejohnston.ie/" target="_blank" rel="noopener">Jeanie Johnston</a>, replica di una nave dei migranti</li>
           </ul>
         </div>
 
@@ -1414,9 +1257,9 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">⛓️ Kilmainham Gaol &amp; Phoenix Park</div>
           <div class="tour-transport">🚌 Bus 69/79 dal centro</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://kilmainhamgaolmuseum.ie/" target="_blank">Kilmainham Gaol: il carcere dei leader dell'indipendenza irlandese</a></li>
-            <li><a href="https://phoenixpark.ie/" target="_blank">Phoenix Park: il più grande parco urbano recintato d'Europa, con cervi in libertà</a></li>
-            <li><a href="https://www.dublinzoo.ie/" target="_blank">Dublin Zoo (dentro il parco)</a></li>
+            <li><a href="https://kilmainhamgaolmuseum.ie/" target="_blank" rel="noopener">Kilmainham Gaol: il carcere dei leader dell'indipendenza irlandese</a></li>
+            <li><a href="https://phoenixpark.ie/" target="_blank" rel="noopener">Phoenix Park: il più grande parco urbano recintato d'Europa, con cervi in libertà</a></li>
+            <li><a href="https://www.dublinzoo.ie/" target="_blank" rel="noopener">Dublin Zoo (dentro il parco)</a></li>
             <li>🎟️ Kilmainham si prenota online: i posti finiscono giorni prima</li>
           </ul>
         </div>
@@ -1425,9 +1268,9 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">🛍️ Shopping &amp; centro città</div>
           <div class="tour-transport">🚊 DART → Pearse o Tara Street</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.graftonstreet.ie/" target="_blank">Grafton Street (negozi e artisti di strada)</a></li>
-            <li><a href="https://www.powerscourtcentre.ie/" target="_blank">Powerscourt Townhouse Centre</a></li>
-            <li><a href="https://www.henrystreet.ie/" target="_blank">Henry Street (più economica di Grafton)</a></li>
+            <li><a href="https://www.graftonstreet.ie/" target="_blank" rel="noopener">Grafton Street (negozi e artisti di strada)</a></li>
+            <li><a href="https://www.powerscourtcentre.ie/" target="_blank" rel="noopener">Powerscourt Townhouse Centre</a></li>
+            <li><a href="https://www.henrystreet.ie/" target="_blank" rel="noopener">Henry Street (più economica di Grafton)</a></li>
             <li>🎁 Souvenir tipici: maglioni Aran, Claddagh ring, tè Barry's</li>
           </ul>
         </div>
@@ -1436,8 +1279,8 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">🎶 Musica dal vivo &amp; sport gaelici</div>
           <div class="tour-transport">🚊 Temple Bar / DART → Drumcondra per Croke Park</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.templebar.ie/" target="_blank">Sessioni di musica tradizionale nei pub di Temple Bar (anche pomeridiane)</a></li>
-            <li><a href="https://crokepark.ie/" target="_blank">Croke Park &amp; GAA Museum: hurling e football gaelico</a></li>
+            <li><a href="https://www.templebar.ie/" target="_blank" rel="noopener">Sessioni di musica tradizionale nei pub di Temple Bar (anche pomeridiane)</a></li>
+            <li><a href="https://crokepark.ie/" target="_blank" rel="noopener">Croke Park &amp; GAA Museum: hurling e football gaelico</a></li>
             <li>L'hurling è lo sport di squadra più veloce al mondo — vale la visita anche solo per il museo</li>
             <li>⚠️ Nei pub si entra per la musica e il cibo, non per l'alcol: siete studenti minorenni</li>
           </ul>
@@ -1447,8 +1290,8 @@ to{transform:rotate(360deg)}}
           <div class="tour-title">🌾 A due passi da Malahide</div>
           <div class="tour-transport">🚶 A piedi o 🚌 Bus 42 / DART</div>
           <ul style="margin-top: 10px;">
-            <li><a href="https://www.visitdublin.com/guides/things-to-do-malahide" target="_blank">Malahide Beach e passeggiata lungo il Coast Road</a></li>
-            <li><a href="https://newbridgehouseandfarm.com/" target="_blank">🐄 Newbridge House &amp; Farm a Donabate: fattoria didattica tradizionale irlandese</a></li>
+            <li><a href="https://www.visitdublin.com/guides/things-to-do-malahide" target="_blank" rel="noopener">Malahide Beach e passeggiata lungo il Coast Road</a></li>
+            <li><a href="https://newbridgehouseandfarm.com/" target="_blank" rel="noopener">🐄 Newbridge House &amp; Farm a Donabate: fattoria didattica tradizionale irlandese</a></li>
             <li>Portmarnock Beach: 5 km di sabbia, raggiungibile in bus</li>
             <li>🌅 Il tramonto sulla marina di Malahide è il posto migliore per le foto del viaggio</li>
           </ul>
@@ -1459,35 +1302,35 @@ to{transform:rotate(360deg)}}
 
     <section id="mappe" class="card culture-card">
       <h2 data-icon="📍">Mappe Turistiche di Dublino</h2>
-      
+
       <h3 style="color: var(--irish-green); margin: 20px 0 15px 0; font-size: 1.3rem;">🗺️ Mappe Turistiche Ufficiali:</h3>
       <div class="tour-grid">
         <div class="tour-card" style="background: linear-gradient(135deg, rgba(0,154,73,0.1), rgba(255,255,255,0.9));">
           <div class="tour-title" style="color: var(--irish-green);">🇮🇪 Mappa Ufficiale Visit Dublin</div>
-          <p><a href="https://www.visitdublin.com/whats-nearby" target="_blank" style="color: var(--irish-orange); font-weight: 600;">Mappa interattiva completa di Dublino</a></p>
+          <p><a href="https://www.visitdublin.com/whats-nearby" target="_blank" rel="noopener" style="color: var(--irish-orange); font-weight: 600;">Mappa interattiva completa di Dublino</a></p>
           <p>Tutti i luoghi turistici, trasporti e punti di interesse</p>
         </div>
-        
+
         <div class="tour-card" style="background: linear-gradient(135deg, rgba(255,121,0,0.1), rgba(255,255,255,0.9));">
           <div class="tour-title" style="color: var(--irish-orange);">🍀 Mappa Guida (PDF)</div>
-          <p><a href="https://agrariomendel.edu.it/allegati/all/5012-guida-smart-dublino.pdf" target="_blank" style="color: var(--irish-green); font-weight: 600;">Guida Smart Dublino in PDF</a></p>
+          <p><a href="https://agrariomendel.edu.it/allegati/all/5012-guida-smart-dublino.pdf" target="_blank" rel="noopener" style="color: var(--irish-green); font-weight: 600;">Guida Smart Dublino in PDF</a></p>
           <p>La mappa più usata e aggiornata</p>
         </div>
-        
+
         <div class="tour-card" style="background: linear-gradient(135deg, rgba(76,175,80,0.1), rgba(255,255,255,0.9));">
           <div class="tour-title" style="color: var(--light-green);">🇮🇹 Irlanda in Italiano</div>
-          <p><a href="https://www.irlandando.it/dublino/mappa-dublino/" target="_blank" style="color: var(--irish-orange); font-weight: 600;">Mappa turistica di Dublino</a></p>
+          <p><a href="https://www.irlandando.it/dublino/mappa-dublino/" target="_blank" rel="noopener" style="color: var(--irish-orange); font-weight: 600;">Mappa turistica di Dublino</a></p>
           <p>Risorse turistiche specifiche per italiani</p>
         </div>
       </div>
-      
+
       <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">📱 App e Risorse Digitali:</h3>
       <ul>
-        <li><a href="https://www.transportforireland.ie/plan-a-journey/network-maps/" target="_blank">Mappe complete rete trasporti TFI</a></li>
-        <li><a href="https://moovitapp.com" target="_blank">Moovit (app navigazione trasporti pubblici)</a></li>
-        <li><a href="https://citymapper.com/dublin" target="_blank">Citymapper Dublin (trasporti urbani)</a></li>
+        <li><a href="https://www.transportforireland.ie/plan-a-journey/network-maps/" target="_blank" rel="noopener">Mappe complete rete trasporti TFI</a></li>
+        <li><a href="https://moovitapp.com" target="_blank" rel="noopener">Moovit (app navigazione trasporti pubblici)</a></li>
+        <li><a href="https://citymapper.com/dublin" target="_blank" rel="noopener">Citymapper Dublin (trasporti urbani)</a></li>
       </ul>
-      
+
       <div style="text-align: center; margin-top: 20px; padding: 15px; background: rgba(0,154,73,0.1); border-radius: 10px; border: 2px solid var(--irish-green);">
         <p><strong>💡 Consiglio:</strong> Scarica le mappe offline prima di partire! Usa i link sopra per orientarti a Dublino e pianificare i tuoi spostamenti in anticipo.</p>
       </div>
@@ -1495,40 +1338,40 @@ to{transform:rotate(360deg)}}
 
     <section id="tempo-libero" class="card culture-card">
       <h2 data-icon="🏰">Cultura & Tempo Libero</h2>
-      
+
       <h3 style="color: var(--irish-green); margin: 20px 0 15px 0; font-size: 1.3rem;">🍀 A Malahide:</h3>
       <ul>
-        <li><a href="https://malahidecastleandgardens.ie/" target="_blank">Malahide Castle & Gardens (castello medievale e giardini botanici)</a></li>
-        <li><a href="https://www.visitdublin.com/guides/things-to-do-malahide" target="_blank">Visit Dublin — Guida completa Malahide</a></li>
-        <li><a href="https://www.hellotickets.it/irlanda/dublino/10-migliori-cose-da-fare-a-malahide-irlanda/sc-130-2723" target="_blank">10 cose da fare a Malahide</a></li>
+        <li><a href="https://malahidecastleandgardens.ie/" target="_blank" rel="noopener">Malahide Castle & Gardens (castello medievale e giardini botanici)</a></li>
+        <li><a href="https://www.visitdublin.com/guides/things-to-do-malahide" target="_blank" rel="noopener">Visit Dublin — Guida completa Malahide</a></li>
+        <li><a href="https://www.hellotickets.it/irlanda/dublino/10-migliori-cose-da-fare-a-malahide-irlanda/sc-130-2723" target="_blank" rel="noopener">10 cose da fare a Malahide</a></li>
       </ul>
-      
-      <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">🛏️ Musei e Cultura Dublino:</h3>
+
+      <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">🏛️ Musei e Cultura a Dublino:</h3>
       <ul>
-        <li><a href="https://www.museum.ie/en-ie/home" target="_blank">National Museum of Ireland (storia e archeologia)</a></li>
-        <li><a href="https://www.nationalgallery.ie/" target="_blank">National Gallery (arte europea)</a></li>
-        <li><a href="https://www.visitdublin.com/guides/irish-writers-tour-dublin" target="_blank">Dublin Writers Museum (letteratura irlandese)</a></li>
-        <li><a href="https://www.gpomuseum.ie/" target="_blank">GPO Museum (storia dell'indipendenza)</a></li>
-        <li><a href="https://epicchq.com/" target="_blank">EPIC — The Irish Emigration Museum (museo dell'emigrazione irlandese, più volte eletto miglior attrazione d'Europa)</a></li>
-        <li><a href="https://www.guinness-storehouse.com/en/home" target="_blank">Guinness Storehouse</a></li>
-        <li><a href="https://www.ireland.com/it-it/cose-da-fare/attrazioni/musei-nazionali-irlanda/" target="_blank">National Museum (sito ufficiale del turismo)</a></li>
-        <li><a href="https://www.kilmainhamgaolmuseum.ie/" target="_blank">Kilmainham Gaol Museum</a></li>
+        <li><a href="https://www.museum.ie/en-ie/home" target="_blank" rel="noopener">National Museum of Ireland (storia e archeologia)</a></li>
+        <li><a href="https://www.nationalgallery.ie/" target="_blank" rel="noopener">National Gallery (arte europea)</a></li>
+        <li><a href="https://www.visitdublin.com/guides/irish-writers-tour-dublin" target="_blank" rel="noopener">Dublin Writers Museum (letteratura irlandese)</a></li>
+        <li><a href="https://www.gpomuseum.ie/" target="_blank" rel="noopener">GPO Museum (storia dell'indipendenza)</a></li>
+        <li><a href="https://epicchq.com/" target="_blank" rel="noopener">EPIC — The Irish Emigration Museum (museo dell'emigrazione irlandese, più volte eletto miglior attrazione d'Europa)</a></li>
+        <li><a href="https://www.guinness-storehouse.com/en/home" target="_blank" rel="noopener">Guinness Storehouse</a></li>
+        <li><a href="https://www.ireland.com/it-it/cose-da-fare/attrazioni/musei-nazionali-irlanda/" target="_blank" rel="noopener">National Museum (sito ufficiale del turismo)</a></li>
+        <li><a href="https://www.kilmainhamgaolmuseum.ie/" target="_blank" rel="noopener">Kilmainham Gaol Museum</a></li>
       </ul>
     </section>
 
     <section id="frasario" class="card info-card">
       <h2 data-icon="💬">Frasario Completo Italiano-Inglese</h2>
-      
+
       <div class="gaelic-box">
         <h3 style="color: var(--irish-green); margin: 0 0 15px 0; font-size: 1.4rem; text-align: center;">🍀 Espressioni in Gaelico Irlandese (Gaeilge) 🍀</h3>
         <p style="text-align: center; font-style: italic; margin-bottom: 15px;">Impressiona i locali con qualche parola nella lingua tradizionale irlandese!</p>
-        
+
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 10px 0; font-weight: bold; text-align: center;">
           <div style="color: var(--irish-green);">🇮🇹 ITALIANO</div>
           <div style="color: var(--irish-orange);">🍀 GAELICO</div>
           <div style="color: var(--light-green);">📊 PRONUNCIA</div>
         </div>
-        
+
         <div class="gaelic-phrase">
           <div>Ciao / Salve</div>
           <div>Dia dhuit</div>
@@ -1580,7 +1423,7 @@ to{transform:rotate(360deg)}}
           <div>AW-lin</div>
         </div>
       </div>
-      
+
       <h3 style="color: var(--irish-green); margin: 30px 0 15px 0; font-size: 1.3rem;">👋 Saluti e Cortesia:</h3>
       <div class="phrase-grid">
         <div><strong>🇮🇹 Ciao!</strong></div><div><strong>🇬🇧 Hello! / Hi!</strong></div>
@@ -1602,7 +1445,7 @@ to{transform:rotate(360deg)}}
         <div>Mi dispiace</div><div>I'm sorry</div>
         <div>Non c'è problema</div><div>No problem</div>
       </div>
-      
+
       <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">🗣️ Comunicazione Base:</h3>
       <div class="phrase-grid">
         <div><strong>🇮🇹 Non parlo inglese molto bene</strong></div><div><strong>🇬🇧 I don't speak English very well</strong></div>
@@ -1622,7 +1465,7 @@ to{transform:rotate(360deg)}}
         <div>Sono uno studente</div><div>I'm a student</div>
         <div>Sto imparando l'inglese</div><div>I'm learning English</div>
       </div>
-      
+
       <h3 style="color: var(--light-green); margin: 25px 0 15px 0; font-size: 1.3rem;">🚇 Trasporti e Orientamento:</h3>
       <div class="phrase-grid">
         <div><strong>🇮🇹 Dov'è la stazione?</strong></div><div><strong>🇬🇧 Where is the station?</strong></div>
@@ -1644,7 +1487,7 @@ to{transform:rotate(360deg)}}
         <div>Vai dritto</div><div>Go straight</div>
         <div>È vicino</div><div>It's nearby</div>
       </div>
-      
+
       <h3 style="color: var(--irish-green); margin: 25px 0 15px 0; font-size: 1.3rem;">🍽️ Ristoranti e Cibo:</h3>
       <div class="phrase-grid">
         <div><strong>🇮🇹 Vorrei prenotare un tavolo</strong></div><div><strong>🇬🇧 I'd like to book a table</strong></div>
@@ -1668,7 +1511,7 @@ to{transform:rotate(360deg)}}
         <div>L'acqua è potabile?</div><div>Is the water drinkable?</div>
         <div>Posso avere dell'acqua?</div><div>Can I have some water?</div>
       </div>
-      
+
       <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">🛒 Shopping e Acquisti:</h3>
       <div class="phrase-grid">
         <div><strong>🇮🇹 Quanto costa questo?</strong></div><div><strong>🇬🇧 How much is this?</strong></div>
@@ -1690,7 +1533,7 @@ to{transform:rotate(360deg)}}
         <div>È in saldo?</div><div>Is it on sale?</div>
         <div>C'è uno sconto?</div><div>Is there a discount?</div>
       </div>
-      
+
       <h3 style="color: var(--light-green); margin: 25px 0 15px 0; font-size: 1.3rem;">🏨 Alloggio e Sistemazione:</h3>
       <div class="phrase-grid">
         <div><strong>🇮🇹 Ho una prenotazione</strong></div><div><strong>🇬🇧 I have a reservation</strong></div>
@@ -1708,7 +1551,7 @@ to{transform:rotate(360deg)}}
         <div>A che ora devo liberare la camera?</div><div>What time is check-out?</div>
         <div>Posso lasciare i bagagli?</div><div>Can I leave my luggage?</div>
       </div>
-      
+
       <h3 style="color: var(--irish-green); margin: 25px 0 15px 0; font-size: 1.3rem;">🚨 Emergenze e Problemi:</h3>
       <div class="phrase-grid">
         <div><strong>🇮🇹 Aiuto!</strong></div><div><strong>🇬🇧 Help!</strong></div>
@@ -1728,7 +1571,7 @@ to{transform:rotate(360deg)}}
         <div>Potete contattare l'ambasciata?</div><div>Can you contact the embassy?</div>
         <div>Ho bisogno di un interprete</div><div>I need an interpreter</div>
       </div>
-      
+
       <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">🎭 Tempo Libero e Turismo:</h3>
       <div class="phrase-grid">
         <div><strong>🇮🇹 Cosa c'è da vedere qui?</strong></div><div><strong>🇬🇧 What is there to see here?</strong></div>
@@ -1744,41 +1587,41 @@ to{transform:rotate(360deg)}}
         <div>Che tempo farà domani?</div><div>What will the weather be like tomorrow?</div>
         <div>Dove posso comprare souvenir?</div><div>Where can I buy souvenirs?</div>
       </div>
-      
+
       <div style="text-align: center; margin-top: 30px; padding: 20px; background: rgba(255,121,0,0.1); border-radius: 10px; border: 2px solid var(--irish-orange);">
         <p><strong>📱 Risorse aggiuntive per il frasario:</strong><br>
-        <a href="https://www.ireland.com/it-it/articoli/cultura/espressioni-slang-irlandese/" target="_blank" style="color: var(--irish-green); font-weight: 600;">Visit Ireland - Espressioni e slang irlandese</a><br>
-        <a href="https://translate.google.com" target="_blank" style="color: var(--irish-orange); font-weight: 600;">Google Translate (scarica offline!)</a><br>
+        <a href="https://www.ireland.com/it-it/articoli/cultura/espressioni-slang-irlandese/" target="_blank" rel="noopener" style="color: var(--irish-green); font-weight: 600;">Visit Ireland - Espressioni e slang irlandese</a><br>
+        <a href="https://translate.google.com" target="_blank" rel="noopener" style="color: var(--irish-orange); font-weight: 600;">Google Translate (scarica offline!)</a><br>
         <em>💡 Scarica Google Translate offline prima di partire per avere sempre una traduzione a portata di mano!</em></p>
       </div>
     </section>
 
     <section id="emergenze" class="card transport-card">
       <h2 data-icon="🚨">Contatti di Emergenza in Irlanda</h2>
-      
+
       <div class="emergency-box">
         <div>🚨 NUMERO UNICO EMERGENZE</div>
         <div class="emergency-number">112</div>
         <div>(Polizia, Ambulanza, Vigili del Fuoco)</div>
       </div>
-      
+
       <h3 style="color: var(--irish-green); margin: 20px 0 15px 0; font-size: 1.3rem;">📞 Altri Numeri Utili:</h3>
       <ul>
         <li><strong>🏥 Beaumont Hospital:</strong> <a href="tel:+35318093000">+353 1 809 3000</a> (ospedale principale zona Nord Dublino)</li>
         <li><strong>🚓 Gardaí (Polizia) Malahide:</strong> <a href="tel:+35318454341">+353 1 845 4341</a></li>
-        <li><strong>🛏️ Ambasciata Italia a Dublino:</strong> <a href="tel:+35316601744">+353 1 660 1744</a></li>
+        <li><strong>🇮🇹 Ambasciata d'Italia a Dublino:</strong> <a href="tel:+35316601744">+353 1 660 1744</a></li>
         <li><strong>📞 Directory Enquiries:</strong> 11811 (informazioni telefoniche)</li>
-        <li><strong>🏥 HSE (Servizio Sanitario):</strong> 1850 24 1850</li>
+        <li><strong>🏥 HSE Live (Servizio Sanitario):</strong> <a href="tel:+3531800700700">1800 700 700</a></li>
       </ul>
-      
+
       <h3 style="color: var(--irish-orange); margin: 25px 0 15px 0; font-size: 1.3rem;">📍 Indirizzi Importanti:</h3>
       <ul>
         <li><strong>🏫 ICE School:</strong> Malahide Road, Malahide, Co. Dublin</li>
         <li><strong>🏥 Beaumont Hospital:</strong> Beaumont Rd, Beaumont, Dublin 9</li>
-        <li><strong>🛏️ Ambasciata Italia:</strong> 63-65 Northumberland Rd, Dublin 4</li>
+        <li><strong>🇮🇹 Ambasciata d'Italia:</strong> 63-65 Northumberland Rd, Dublin 4</li>
         <li><strong>🚓 Stazione Gardaí Malahide:</strong> Back Rd, Malahide, Co. Dublin</li>
       </ul>
-      
+
       <div style="background: rgba(255,255,255,0.9); padding: 15px; border-radius: 10px; margin: 20px 0; color: var(--text-dark);">
         <strong>⚠️ IMPORTANTE:</strong> In caso di emergenza, contatta sempre prima i tuoi accompagnatori. Tieni sempre con te i numeri di telefono del gruppo e della famiglia ospitante.
       </div>
@@ -1786,107 +1629,67 @@ to{transform:rotate(360deg)}}
 
     <section id="faq" class="card info-card">
       <h2 data-icon="❓">Domande Frequenti (FAQ)</h2>
-      
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          🔌 Serve un adattatore per le prese elettriche?
-        </div>
-        <div class="faq-answer">
-          <strong>SÌ!</strong> L'Irlanda usa le prese di tipo G (tre spinotti rettangolari). Devi portare un adattatore universale o specifico per Regno Unito/Irlanda. Lo trovi in qualsiasi negozio di elettronica o aeroporto.
-        </div>
-      </div>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          💰 Che valuta si usa? Posso pagare con la carta?
-        </div>
-        <div class="faq-answer">
-          L'Irlanda usa l'<strong>Euro (€)</strong>. Le carte di credito/debito sono accettate ovunque. Consigliamo carte senza commissioni estero come Revolut. Tieni sempre qualche euro in contanti per piccole spese.
-        </div>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">🔌 Serve un adattatore per le prese elettriche?</summary>
+        <div class="faq-answer"><strong>SÌ!</strong> L'Irlanda usa le prese di tipo G (tre spinotti rettangolari). Devi portare un adattatore universale o specifico per Regno Unito/Irlanda. Lo trovi in qualsiasi negozio di elettronica o aeroporto.</div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          📱 Funziona il mio cellulare? Serve una SIM irlandese?
-        </div>
-        <div class="faq-answer">
-          <strong>Sì, funziona perfettamente!</strong> Con l'<strong>UE roaming</strong>, usi il tuo piano italiano senza costi extra. Non serve comprare una SIM irlandese. Assicurati che il roaming sia attivato prima di partire.
-        </div>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">💰 Che valuta si usa? Posso pagare con la carta?</summary>
+        <div class="faq-answer">L'Irlanda usa l'<strong>Euro (€)</strong>. Le carte di credito/debito sono accettate ovunque. Consigliamo carte senza commissioni estero come Revolut. Tieni sempre qualche euro in contanti per piccole spese.</div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          🌧️ Che tempo fa? Cosa metto in valigia?
-        </div>
-        <div class="faq-answer">
-          A settembre: 15-18°C, possibili piogge. <strong>Essenziale:</strong> giacca impermeabile, felpa, scarpe comode e impermeabili, ombrello compatto. Il tempo cambia spesso, vestiti a strati!
-        </div>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">📱 Funziona il mio cellulare? Serve una SIM irlandese?</summary>
+        <div class="faq-answer"><strong>Sì, funziona perfettamente!</strong> Con l'<strong>UE roaming</strong>, usi il tuo piano italiano senza costi extra. Non serve comprare una SIM irlandese. Assicurati che il roaming sia attivato prima di partire.</div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          🚇 Come funzionano i trasporti? Quanto costano?
-        </div>
-        <div class="faq-answer">
-          Compra la <strong>Leap Card</strong> (tessera ricaricabile) per autobus, DART e LUAS. Costa €5 + ricarica. Più economica dei biglietti singoli. DART Malahide-Centro: circa €3-4. Scarica l'app TFI Go!
-        </div>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">🌧️ Che tempo fa? Cosa metto in valigia?</summary>
+        <div class="faq-answer">A settembre: 15-18°C, possibili piogge. <strong>Essenziale:</strong> giacca impermeabile, felpa, scarpe comode e impermeabili, ombrello compatto. Il tempo cambia spesso, vestiti a strati!</div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          🏥 Come funziona la sanità? Serve assicurazione?
-        </div>
-        <div class="faq-answer">
-          Porta la <strong>Tessera Europea di Assicurazione Malattia (TEAM)</strong> - la trovi sul retro della tua tessera sanitaria. Copre le emergenze mediche. Per sicurezza, verifica se hai un'assicurazione viaggio.
-        </div>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">🚇 Come funzionano i trasporti? Quanto costano?</summary>
+        <div class="faq-answer">Compra la <strong>Leap Card</strong> (tessera ricaricabile) per autobus, DART e LUAS. Costa €5 + ricarica. Più economica dei biglietti singoli. DART Malahide-Centro: circa €3-4. Scarica l'app TFI Go!</div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          🛂 Che documenti servono per entrare in Irlanda?
-        </div>
-        <div class="faq-answer">
-          <strong>Carta d'identità valida per l'espatrio</strong> o passaporto in corso di validità. L'Irlanda è UE, quindi niente visto. Porta sempre i documenti originali, non fotocopie.
-        </div>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">🏥 Come funziona la sanità? Serve assicurazione?</summary>
+        <div class="faq-answer">Porta la <strong>Tessera Europea di Assicurazione Malattia (TEAM)</strong> - la trovi sul retro della tua tessera sanitaria. Copre le emergenze mediche. Per sicurezza, verifica se hai un'assicurazione viaggio.</div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          🍺 Posso bere alcolici? Qual è l'età minima?
-        </div>
-        <div class="faq-answer">
-          L'età minima è <strong>18 anni</strong> per tutti gli alcolici. Ti chiederanno sempre un documento. Bere responsabilmente e mai eccedere - rappresenti la scuola!
-        </div>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">🛂 Che documenti servono per entrare in Irlanda?</summary>
+        <div class="faq-answer"><strong>Carta d'identità valida per l'espatrio</strong> o passaporto in corso di validità. L'Irlanda è UE, quindi niente visto. Porta sempre i documenti originali, non fotocopie.</div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          💳 Quanto costa mangiare fuori? E la spesa?
-        </div>
-        <div class="faq-answer">
-          <strong>Ristorante:</strong> €15-25 a pasto. <strong>Pub/Fast food:</strong> €8-15. <strong>Supermercato:</strong> simile all'Italia, Lidl più economico. Fish & chips: €8-12. Un caffè: €3-4.
-        </div>
-      </div>
+      <details class="faq-item">
+        <summary class="faq-question">🍺 Posso bere alcolici? Qual è l'età minima?</summary>
+        <div class="faq-answer">L'età minima è <strong>18 anni</strong> per tutti gli alcolici. Ti chiederanno sempre un documento. Bere responsabilmente e mai eccedere - rappresenti la scuola!</div>
+      </details>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          🎒 Cosa NON devo dimenticare di portare?
-        </div>
-        <div class="faq-answer">
-          ✅ Adattatore elettrico tipo G<br>
+      <details class="faq-item">
+        <summary class="faq-question">💳 Quanto costa mangiare fuori? E la spesa?</summary>
+        <div class="faq-answer"><strong>Ristorante:</strong> €15-25 a pasto. <strong>Pub/Fast food:</strong> €8-15. <strong>Supermercato:</strong> simile all'Italia, Lidl più economico. Fish & chips: €8-12. Un caffè: €3-4.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">🎒 Cosa NON devo dimenticare di portare?</summary>
+        <div class="faq-answer">✅ Adattatore elettrico tipo G<br>
           ✅ Giacca impermeabile e ombrello<br>
           ✅ Tessera sanitaria (TEAM sul retro)<br>
           ✅ Documento d'identità valido<br>
           ✅ App scaricate (TFI Go, Translate offline)<br>
-          ✅ Scarpe comode e impermeabili
-        </div>
-      </div>
+          ✅ Scarpe comode e impermeabili</div>
+      </details>
     </section>
 
     <section id="contatti" class="card contacts-card">
-      <h2 data-icon="📱">Contatti</h2>
-      <p><strong>🏫 ICE Scuola:</strong> <a href="https://www.iceireland.com/" target="_blank">Sito ufficiale Irish College of English</a><br>
-         <strong>🛏️ IIS Mendel:</strong> <a href="https://agrariomendel.edu.it/" target="_blank">Sito istituzionale della nostra scuola</a><br>
+      <h2 data-icon="📱">App utili da scaricare</h2>
+      <p><strong>🏫 ICE Scuola:</strong> <a href="https://www.iceireland.com/" target="_blank" rel="noopener">Sito ufficiale Irish College of English</a><br>
+         <strong>🎓 IIS Mendel:</strong> <a href="https://agrariomendel.edu.it/" target="_blank" rel="noopener">Sito istituzionale della nostra scuola</a><br>
          <strong>📧 Stage Irlanda:</strong> <a href="mailto:stageirlanda@agrariomendel.it">stageirlanda@agrariomendel.it</a>
       </p></section>
 <section id="risorse" class="card culture-card">
@@ -1927,81 +1730,42 @@ to{transform:rotate(360deg)}}
     <p>🍀 Pagina realizzata dal prof. Crespi con la collaborazione della prof.ssa Musazzi — IIS Mendel 🍀<br>
        © 2026 IIS Gregorio Mendel — Tutti i diritti riservati<br>
        <em>Sláinte! Che la fortuna irlandese vi accompagni in questa avventura!</em></p>
-  
+
 
 
 
 </footer>
 
   <script>
-    // Background slideshow
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.bg-slide');
-    
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-    
-    // Change slide every 4 seconds
-    setInterval(nextSlide, 4000);
-
-    // Smooth scrolling for navigation
-    document.querySelectorAll('.nav a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      });
-    });
-
-    // FAQ toggle function
-    function toggleFAQ(element) {
-      const answer = element.nextElementSibling;
-      const isOpen = answer.style.display === 'block';
-      
-      // Close all FAQ answers
-      document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-      
-      // Toggle current answer
-      if (!isOpen) {
-        answer.style.display = 'block';
-      }
-    }
-
     // COUNTDOWN CORRETTO - Calcola giorni di calendario rimanenti
     function updateCountdown() {
       const now = new Date();
-      
+
       // DATA DI PARTENZA: 27 settembre 2026 alle 8:00
       const departure = new Date('2026-09-27T08:00:00');
-      
+
       const diff = departure - now;
-      
+
       if (diff <= 0) {
         // Se la data è passata
         document.querySelector('.countdown-days').textContent = "È il momento di partire!";
         document.querySelector('.countdown-text').textContent = "🇮🇪 Siete in viaggio!";
         return;
       }
-      
+
       // Calcola i giorni di calendario rimanenti (più intuitivo)
       const today = new Date();
       today.setHours(0, 0, 0, 0); // Inizio di oggi
-      
+
       const departureDay = new Date('2026-09-27');
       departureDay.setHours(0, 0, 0, 0); // Inizio del giorno di partenza
-      
+
       const daysDiff = Math.ceil((departureDay - today) / (1000 * 60 * 60 * 24));
-      
+
       // Per il dettaglio orario usiamo il calcolo originale
       const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      
+
       const countdownElement = document.querySelector('.countdown-days');
       if (countdownElement) {
         if (daysDiff > 1) {
@@ -2015,58 +1779,57 @@ to{transform:rotate(360deg)}}
         }
       }
     }
-    
+
     // Aggiornamento ogni ora
     updateCountdown();
     setInterval(updateCountdown, 3600000); // 1 ora = 3600000 millisecondi
   </script>
 
 <script>
-  (function(){ 
+  (function(){
     // Background gallery controller
     const urls = [
-  "assets/img/IMG_20240929_114342.jpg",
-  "assets/img/IMG_20240929_133208.jpg",
-  "assets/img/IMG_20240930_082814.jpg",
-  "assets/img/IMG_20240930_093907.jpg",
-  "assets/img/IMG_20240930_103116.jpg",
-  "assets/img/IMG_20240930_105824.jpg",
-  "assets/img/IMG_20240930_142427.jpg",
-  "assets/img/IMG_20240930_171016.jpg",
-  "assets/img/IMG_20240930_171108.jpg",
-  "assets/img/IMG_20241001_101941.jpg",
-  "assets/img/IMG_20241003_121058.jpg",
-  "assets/img/IMG_20241001_102219.jpg",
-  "assets/img/IMG_20241001_103243.jpg",
-  "assets/img/IMG_20241001_104213_1.jpg",
-  "assets/img/IMG_20241001_115159.jpg",
-  "assets/img/IMG_20241002_100637.jpg",
-  "assets/img/IMG_20241002_104651.jpg",
-  "assets/img/IMG_20241002_105833.jpg",
-  "assets/img/IMG_20241003_094900.jpg",
-  "assets/img/IMG_20241003_100830.jpg",
-  "assets/img/IMG_20241004_111343.jpg",
-  "assets/img/IMG_20241003_121656.jpg",
-  "assets/img/IMG_20241003_122333.jpg",
-  "assets/img/IMG_20241003_122657.jpg",
-  "assets/img/IMG_20241003_123548.jpg",
-  "assets/img/IMG_20241003_141859.jpg",
-  "assets/img/IMG_20241004_105037.jpg",
-  "assets/img/IMG_20241004_110252.jpg",
-  "assets/img/IMG_20241004_111200.jpg",
-  "assets/img/IMG_20241004_111244.jpg",
-  "assets/img/IMG_20241004_111343.jpg",
-  "assets/img/IMG-20241008-WA0014.jpg",
-  "assets/img/Immagine WhatsApp 2024-10-08 ore 17.58.14_6007c233.jpg",
-  "assets/img/IMG_20241004_121702.jpg",
-  "assets/img/IMG_20241004_151045.jpg",
-  "assets/img/IMG_20241005_105312.jpg",
-  "assets/img/IMG_20241005_105355.jpg",
-  "assets/img/IMG_20241005_110617.jpg",
-  "assets/img/IMG_20241005_110832.jpg",
-  "assets/img/IMG_20241005_150500.jpg",
-  "assets/img/IMG_20241005_150642.jpg"
-];
+      "assets/img-opt/IMG-20241008-WA0014.webp",
+      "assets/img-opt/IMG_20240929_114342.webp",
+      "assets/img-opt/IMG_20240929_133208.webp",
+      "assets/img-opt/IMG_20240930_082814.webp",
+      "assets/img-opt/IMG_20240930_093907.webp",
+      "assets/img-opt/IMG_20240930_103116.webp",
+      "assets/img-opt/IMG_20240930_105824.webp",
+      "assets/img-opt/IMG_20240930_142427.webp",
+      "assets/img-opt/IMG_20240930_171016.webp",
+      "assets/img-opt/IMG_20240930_171108.webp",
+      "assets/img-opt/IMG_20241001_101941.webp",
+      "assets/img-opt/IMG_20241001_102219.webp",
+      "assets/img-opt/IMG_20241001_103243.webp",
+      "assets/img-opt/IMG_20241001_104213_1.webp",
+      "assets/img-opt/IMG_20241001_115159.webp",
+      "assets/img-opt/IMG_20241002_100637.webp",
+      "assets/img-opt/IMG_20241002_104651.webp",
+      "assets/img-opt/IMG_20241002_105833.webp",
+      "assets/img-opt/IMG_20241003_094900.webp",
+      "assets/img-opt/IMG_20241003_100830.webp",
+      "assets/img-opt/IMG_20241003_121058.webp",
+      "assets/img-opt/IMG_20241003_121656.webp",
+      "assets/img-opt/IMG_20241003_122333.webp",
+      "assets/img-opt/IMG_20241003_122657.webp",
+      "assets/img-opt/IMG_20241003_123548.webp",
+      "assets/img-opt/IMG_20241003_141859.webp",
+      "assets/img-opt/IMG_20241004_105037.webp",
+      "assets/img-opt/IMG_20241004_110252.webp",
+      "assets/img-opt/IMG_20241004_111200.webp",
+      "assets/img-opt/IMG_20241004_111244.webp",
+      "assets/img-opt/IMG_20241004_111343.webp",
+      "assets/img-opt/IMG_20241004_121702.webp",
+      "assets/img-opt/IMG_20241004_151045.webp",
+      "assets/img-opt/IMG_20241005_105312.webp",
+      "assets/img-opt/IMG_20241005_105355.webp",
+      "assets/img-opt/IMG_20241005_110617.webp",
+      "assets/img-opt/IMG_20241005_110832.webp",
+      "assets/img-opt/IMG_20241005_150500.webp",
+      "assets/img-opt/IMG_20241005_150642.webp",
+      "assets/img-opt/Immagine-WhatsApp-2024-10-08-ore-17-58-14_6007c233.webp"
+    ];
     const a = document.getElementById('slide-a');
     const b = document.getElementById('slide-b');
     if (!a || !b || !urls.length) return;
@@ -2083,6 +1846,7 @@ to{transform:rotate(360deg)}}
       const front = showingA ? b : a;    // the one that will fade in
       const back  = showingA ? a : b;    // the one that will fade out
       setBackground(front, nextUrl);
+      var pre = new Image(); pre.src = urls[(idx + 1) % urls.length];
       // Force reflow to ensure transition
       void front.offsetWidth;
       front.classList.add('show');
@@ -2136,9 +1900,16 @@ to{transform:rotate(360deg)}}
       audio.src = tracks[i].src;
       audio.load();
       title.textContent = tracks[i].title;
+      try { localStorage.setItem('mendel-track', String(i)); } catch (e) {}
       if (autoplay) { start(); }
     }
-    load(0, false);
+    var savedIdx = 0, savedMuted = false;
+    try {
+      savedIdx = parseInt(localStorage.getItem('mendel-track') || '0', 10) || 0;
+      savedMuted = localStorage.getItem('mendel-muted') === '1';
+    } catch (e) {}
+    load(savedIdx, false);
+    if (savedMuted) { audio.muted = true; btnMute.textContent = '🔇'; }
 
     function start() {
       var p = audio.play();
@@ -2152,10 +1923,18 @@ to{transform:rotate(360deg)}}
 
     // Se il file non si carica (404, nome sbagliato) lo dice invece di restare muto
     audio.addEventListener('error', function () {
-      console.error('Impossibile caricare:', audio.currentSrc || audio.src);
-      say('File audio non trovato');
+      // Su GitHub Pages i tre mp3 sono nella root del sito; altrove il player si disattiva in silenzio.
+      say('Audio non disponibile');
+      player.style.opacity = '.55';
+      btnPlay.disabled = true; btnNext.disabled = true; btnMute.disabled = true;
+      btnPlay.style.cursor = 'default';
     });
-    audio.addEventListener('canplay', function () { title.textContent = tracks[i].title; });
+    audio.addEventListener('canplay', function () {
+      title.textContent = tracks[i].title;
+      player.style.opacity = '';
+      btnPlay.disabled = btnNext.disabled = btnMute.disabled = false;
+      btnPlay.style.cursor = '';
+    });
 
     btnPlay.addEventListener('click', function () {
       if (audio.paused) { start(); } else { audio.pause(); }
@@ -2163,6 +1942,7 @@ to{transform:rotate(360deg)}}
     btnMute.addEventListener('click', function () {
       audio.muted = !audio.muted;
       btnMute.textContent = audio.muted ? '🔇' : '🔊';
+      try { localStorage.setItem('mendel-muted', audio.muted ? '1' : '0'); } catch (e) {}
     });
     btnNext.addEventListener('click', function () {
       var wasPlaying = !audio.paused;
