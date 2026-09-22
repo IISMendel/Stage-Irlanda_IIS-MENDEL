@@ -1077,6 +1077,121 @@ to{transform:rotate(360deg)}}
     .leap-highlight p { margin: 0 0 10px; font-size: .97rem; line-height: 1.6; }
     .leap-highlight p:last-child { margin-bottom: 0; }
 
+
+    /* ===== Dossier di viaggio ufficiale ===== */
+    .dossier-box {
+      background: linear-gradient(135deg, var(--irish-green), var(--dark-green));
+      border: 4px solid var(--irish-orange);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 0 0 30px;
+      box-shadow: 0 16px 40px rgba(0,0,0,.3);
+      color: #fff !important;
+    }
+    .dossier-box h2 {
+      margin: 0 0 6px; font-size: 1.7rem; color: #fff !important;
+      display: flex; align-items: center; gap: 12px; line-height: 1.25;
+    }
+    .dossier-box .dossier-sub {
+      font-size: 1.02rem; color: #FFE0B2 !important; font-weight: 700; margin-bottom: 18px;
+    }
+    .dossier-box .dossier-intro { font-size: 1rem; line-height: 1.6; color: #fff !important; margin-bottom: 18px; }
+    .dossier-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px; margin-bottom: 24px;
+    }
+    .dossier-grid div {
+      background: rgba(255,255,255,.14);
+      border-radius: 10px; padding: 11px 14px;
+      font-size: .93rem; color: #fff !important;
+    }
+    .dossier-actions {
+      display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 6px;
+    }
+    .dossier-btn {
+      display: inline-block; padding: 16px 30px; border-radius: 50px;
+      font-weight: 800; font-size: 1.05rem; text-decoration: none !important;
+      transition: all .3s ease; text-align: center;
+    }
+    .dossier-btn.primary {
+      background: var(--irish-orange); color: #fff !important;
+      box-shadow: 0 8px 22px rgba(0,0,0,.28);
+    }
+    .dossier-btn.secondary {
+      background: #fff; color: var(--dark-green) !important;
+      box-shadow: 0 8px 22px rgba(0,0,0,.22);
+    }
+    .dossier-btn:hover { transform: translateY(-3px) scale(1.03); }
+    .dossier-viewer {
+      margin-top: 24px; border-radius: 14px; overflow: hidden;
+      border: 3px solid rgba(255,255,255,.55); background: #fff;
+    }
+    .dossier-viewer iframe { display: block; width: 100%; height: 640px; border: 0; }
+    .dossier-note {
+      margin-top: 14px; font-size: .88rem; color: #FFE0B2 !important; text-align: center;
+    }
+    @media (max-width: 700px) {
+      .dossier-box { padding: 22px 18px; }
+      .dossier-box h2 { font-size: 1.35rem; }
+      .dossier-viewer { display: none; }
+      .dossier-btn { width: 100%; }
+    }
+
+
+    /* Contenuto integrale del dossier */
+    .dossier-content { margin-top: 26px; }
+    .dossier-content h3 {
+      color: #fff !important; font-size: 1.22rem; margin: 26px 0 12px;
+      padding-bottom: 8px; border-bottom: 2px solid rgba(255,255,255,.35);
+      display: flex; align-items: center; gap: 9px;
+    }
+    .dossier-content h3:first-child { margin-top: 0; }
+    .dossier-content p { color: #fff !important; font-size: .97rem; line-height: 1.65; margin: 0 0 12px; }
+    .dossier-content ul { list-style: none; padding: 0; margin: 0 0 14px; }
+    .dossier-content li {
+      color: #fff !important; font-size: .95rem; line-height: 1.6;
+      padding: 7px 0 7px 26px; position: relative;
+    }
+    .dossier-content li::before {
+      content: '\276F'; position: absolute; left: 4px; top: 7px;
+      color: #FFE0B2 !important; font-weight: 700;
+    }
+    .dossier-content li.yes::before { content: '\2713'; color: #A5D6A7 !important; }
+    .dossier-content li.no::before  { content: '\2715'; color: #FFAB91 !important; }
+    .dossier-content a { color: #FFE0B2 !important; text-decoration: underline; }
+    .dossier-content strong { color: #fff !important; }
+    .dossier-panel {
+      background: rgba(255,255,255,.14); border-radius: 12px;
+      padding: 16px 20px; margin: 0 0 16px;
+    }
+    .dossier-panel.warn {
+      background: rgba(255,121,0,.28); border-left: 5px solid var(--irish-orange);
+    }
+    .dossier-flights {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px; margin-bottom: 16px;
+    }
+    .dossier-flight {
+      background: rgba(255,255,255,.18); border-radius: 12px; padding: 16px 18px;
+      color: #fff !important;
+    }
+    .dossier-flight .fnum {
+      font-size: .78rem; letter-spacing: 1.2px; text-transform: uppercase;
+      color: #FFE0B2 !important; font-weight: 700; margin-bottom: 6px;
+    }
+    .dossier-flight .froute { font-size: 1.05rem; font-weight: 700; color: #fff !important; line-height: 1.5; }
+    .dossier-leaders {
+      display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px;
+    }
+    .dossier-leaders span {
+      background: rgba(255,255,255,.2); border-radius: 50px;
+      padding: 8px 16px; font-size: .93rem; font-weight: 700; color: #fff !important;
+    }
+    .dossier-source {
+      margin-top: 26px; padding-top: 16px; border-top: 2px solid rgba(255,255,255,.3);
+      font-size: .85rem; color: #FFE0B2 !important; line-height: 1.6;
+    }
+
 </style>
 </head>
 <body>
@@ -1110,6 +1225,197 @@ to{transform:rotate(360deg)}}
     </header>
 
 
+    <section class="dossier-box" id="dossier">
+      <h2>📋 Dossier di Viaggio — documento ufficiale</h2>
+      <div class="dossier-sub">ICE – Irish College of English, Malahide · dal 27 settembre al 4 ottobre 2026</div>
+      <div class="dossier-intro">
+        Documento preparato dall'agenzia LET — Language Educational Travels.
+        <strong>Da leggere per intero, studenti e genitori, prima della partenza.</strong>
+      </div>
+
+      <div class="dossier-actions">
+        <a class="dossier-btn primary" href="https://agrariomendel.edu.it/allegati/all/5849-d4e62866-5c92-463a-ab21-47295f8eae2d-1.png" target="_blank" rel="noopener">📖 Apri il documento originale sul sito della scuola</a>
+        <a class="dossier-btn secondary" href="DOSSIER_VIAGGIO_MALAHIDE_2026.pdf" target="_blank" rel="noopener">⬇️ Scarica il PDF completo</a>
+      </div>
+
+      <div class="dossier-content">
+
+        <h3>👥 Group leaders</h3>
+        <div class="dossier-leaders">
+          <span>Prof.ssa Anna Lisa Musazzi</span>
+          <span>Prof.ssa Stefania Marsiglia</span>
+          <span>Prof.ssa Renata Minnaja</span>
+        </div>
+
+        <h3>✈️ Voli e ritrovo</h3>
+        <div class="dossier-panel warn">
+          <p style="margin:0;"><strong>ORE 08.50: incontro in aeroporto a Milano Linate</strong> — primo piano, banchi Aer Lingus.<br>
+          Si raccomanda la massima puntualità.</p>
+        </div>
+        <div class="dossier-flights">
+          <div class="dossier-flight">
+            <div class="fnum">Andata · Aer Lingus · Volo EI433</div>
+            <div class="froute">27 settembre<br>Milano Linate ore 11.20<br>Dublino ore 12.55</div>
+          </div>
+          <div class="dossier-flight">
+            <div class="fnum">Ritorno · Aer Lingus · Volo EI436</div>
+            <div class="froute">4 ottobre<br>Dublino ore 18.00<br>Milano Malpensa ore 21.35</div>
+          </div>
+        </div>
+        <p>All'arrivo in aeroporto a Dublino trasferimento in bus privato a Malahide presso il meeting point
+        con le famiglie. Al ritorno trasferimento in bus privato dal meeting point all'aeroporto di Dublino
+        con arrivo all'aeroporto di Milano Malpensa.</p>
+        <p><strong>All'arrivo a destinazione non è previsto il pranzo, pertanto si consiglia di portarlo dall'Italia.</strong></p>
+
+        <h3>🧳 Bagaglio incluso</h3>
+        <div class="dossier-panel">
+          <ul style="margin:0;">
+            <li>1 borsa a mano da riporre sotto il sedile (massimo 25 x 33 x 20 cm)</li>
+            <li>1 bagaglio da stiva da 20 kg, da imbarcare al check-in correttamente etichettato</li>
+          </ul>
+        </div>
+        <p>Raccomandiamo vivamente di accertarsi prima di recarsi in aeroporto, che il bagaglio non superi
+        i 20 kg previsti, per evitare di essere soggetto ad onerosi supplementi.</p>
+        <p>Cibi e bevande a bordo dell'aeromobile sono a pagamento.</p>
+
+        <h3>✅ È consentito il trasporto in cabina dei seguenti articoli</h3>
+        <ul>
+          <li class="yes">Il trasporto di medicinali che sono acquistabili solo con ricetta, devono essere
+          accompagnati dall'apposita prescrizione medica.</li>
+          <li class="yes">I liquidi devono essere contenuti in recipienti individuali di capacità non superiore
+          a 100 millilitri o equivalente (es. 100 grammi), da trasportare in una busta/sacchetto/borsa di
+          plastica trasparente, richiudibile, completamente chiusa, di capacità non eccedente 1 litro
+          (ovvero di dimensioni pari, ad esempio, a circa cm 18 x 20) separatamente dall'altro bagaglio a
+          mano. Per busta di plastica/sacchetto trasparente richiudibile deve intendersi un contenitore che
+          consente di vedere facilmente il contenuto, senza che sia necessario aprirlo e che sia dotato di
+          un sistema integralmente sigillante, come zip oppure chiusure a pressione o comunque una
+          chiusura che dopo essere stata aperta possa essere richiusa.</li>
+        </ul>
+
+        <h3>⛔ È vietato il trasporto in cabina dei seguenti articoli</h3>
+        <ul>
+          <li class="no">Armi appuntite o con spigoli e oggetti taglienti</li>
+          <li class="no">Temperini e coltelli a serramanico con lame di qualsiasi lunghezza</li>
+          <li class="no">Coltelli, fra cui coltelli cerimoniali, con lame di metallo o di qualsiasi altro materiale
+          sufficientemente robusto da farne armi potenziali</li>
+          <li class="no">Rasoi aperti e lamette (eccetto rasoi di sicurezza o usa e getta con lame incorporate
+          nella cartuccia)</li>
+          <li class="no">Bisturi, forbici, forbicine e lame di qualsiasi genere e tipo</li>
+          <li class="no">Attrezzi che possono essere usati come armi a punta o a spigolo, ad es. trapani e
+          punte di trapano, cutter, coltelli utensili, tutte le seghe, cacciaviti, piedi di porco, martelli, pinze,
+          chiavi inglesi</li>
+        </ul>
+
+        <h3>🪪 Documentazione necessaria</h3>
+        <div class="dossier-panel warn">
+          <p style="margin:0;"><strong>CARTA DI IDENTITÀ e TESSERA SANITARIA IN CORSO DI VALIDITÀ</strong></p>
+        </div>
+        <p>È richiesta la carta di identità e la Tessera sanitaria (Carta regionale dei servizi).
+        Tutti i documenti devono essere in corso di validità. L'organizzazione declina ogni responsabilità
+        nel caso problemi derivanti da errata comunicazione di nomi, cognomi o date di nascita durante la
+        prenotazione e/o nel caso in cui il partecipante non possa partire a causa della mancata
+        documentazione, o in caso di documenti non validi o scaduti.</p>
+        <p>Per i partecipanti di altre nazionalità può essere richiesto il passaporto e/o il visto per
+        l'espatrio. Si prega di informarsi presso il Consolato della Repubblica d'Irlanda cliccando il
+        seguente link: <a href="https://www.dfa.ie/irish-embassy/italy/" target="_blank" rel="noopener">dfa.ie/irish-embassy/italy</a></p>
+
+        <h3>🏫 La scuola: ICE (Irish College of English)</h3>
+        <p><strong>Indirizzo:</strong> 6 Church Rd — Malahide, Dublin, Irlanda</p>
+        <p>La scuola è riconosciuta da ACELS, è situata a Malahide, un piccolo sobborgo sulla costa a soli
+        22 minuti di DART dal centro di Dublino. La scuola dispone di 7 aule modernamente attrezzate.
+        Inoltre mette a disposizione degli studenti, biblioteca e connessione Wi-Fi.</p>
+        <p>La scuola offre un'esperienza unica ed educativa nella bellissima zona costale di Dublino, con
+        particolare attenzione all'esperienza dello studente alla sua sicurezza e benessere.
+        Si tratta di una scuola con esperienza trentennale nell'organizzazione di stage linguistici a
+        Malahide, meta ideale per gli studenti.</p>
+        <p>Si trova a soli 10 minuti dall'aeroporto di Dublino e a 22 minuti di DART dal centro di Dublino.
+        Il ricco programma di attività permette di conoscere Dublino, vivendo in una zona tranquilla e
+        residenziale della "Greater Dublin area".</p>
+
+        <h3>🏠 Suggerimenti — famiglia ospitante</h3>
+        <ul>
+          <li>La sistemazione è prevista in famiglia in camere doppie e triple.</li>
+          <li>Il trattamento è di pensione completa con prima colazione e cena in famiglia e pranzo con
+          packed lunch fornito dalla famiglia.</li>
+          <li>Le lenzuola e l'asciugamano ti saranno fornite dalla famiglia, ma ti consigliamo di portare
+          anche un accappatoio in microfibra (attenzione al peso).</li>
+          <li>Le famiglie dispongono in genere di un asciugacapelli da richiedere in caso di bisogno, si
+          consiglia eventualmente di portarne uno da condividere tra gli studenti della stessa famiglia per
+          limitare il peso del bagaglio.</li>
+          <li>Essere gentili, rispettosi, rispettare gli orari dei pasti, non fumare in casa ed avvisare in caso
+          di ritardo, ti permetterà di vivere al meglio la tua esperienza.</li>
+          <li>Si ricorda che in Irlanda lo standard delle prese elettriche è quello con tre lamelle piatte,
+          quindi, sarà necessario portare da casa un adattatore.</li>
+          <li>Le famiglie per esigenze improvvise possono essere cambiate fino all'arrivo.</li>
+        </ul>
+
+        <h3>🧥 Abbigliamento consigliato</h3>
+        <p>Il clima a Malahide è tipicamente autunnale, fresco e variabile. Alcune giornate possono essere
+        piovose, pertanto, consigliamo di portare giacche impermeabili.
+        <strong>La temperatura massima stagionale è di 16°C e la minima è di 10°C.</strong></p>
+        <p>Si consiglia di indossare già alla partenza l'abbigliamento più pesante (giubbotto impermeabile
+        e felpa) così da non incidere sul peso del bagaglio.</p>
+
+        <h3>⚖️ Comportamento</h3>
+        <p>Per una buona riuscita del soggiorno e per una piacevole convivenza, ti invitiamo a seguire
+        sempre le indicazioni che verranno fornite dai docenti accompagnatori e dallo staff della scuola
+        estera, di rispettare gli orari delle lezioni e delle attività ricreative, di gestire con cura il materiale
+        della scuola e le proprietà della famiglia ospitante.</p>
+        <p>Si fa presente che qualsiasi problematica rilevata dallo studente dovrà essere tempestivamente
+        comunicata ai docenti accompagnatori che provvederanno ad una verifica e successiva possibile
+        risoluzione concordata con la scuola estera e l'agenzia LET.
+        Qualsiasi lamentela pervenuta successivamente al rientro in Italia non avrà alcuna valenza.</p>
+        <p>Ti ricordiamo che per motivi di privacy non è possibile fotografare gli interni delle case delle
+        famiglie ospitanti salvo benestare dei padroni di casa. Questo per evitare spiacevoli inconvenienti,
+        come purtroppo già capitato, che possono arrivare fino alla denuncia alle autorità competenti.</p>
+        <p>Si consiglia infine di portare un piccolo pensiero per la famiglia ospitante in modo da rompere il
+        ghiaccio e facilitare sin da subito la conversazione. (Ad esempio, dolcetti, formaggio o qualcosa di
+        tipico della propria città).</p>
+
+        <h3>🕒 Fuso orario</h3>
+        <p>L'Irlanda è un'ora indietro rispetto all'Italia.</p>
+
+        <h3>💊 Salute</h3>
+        <p>Consigliamo di portare qualche farmaco generico dall'Italia per eventuali necessità personali.
+        Per chi ha particolari patologie mediche, segnalate al momento dell'iscrizione, consigliamo
+        categoricamente di portare dei propri farmaci dall'Italia e ricordiamo che gli accompagnatori
+        dovranno essere informati in forma scritta delle gravi patologie.</p>
+
+        <h3>🔒 Sicurezza</h3>
+        <p>Teniamo a sottolineare che sia la scuola che la città sono luoghi sicuri.
+        Tuttavia, vorremmo farvi alcune raccomandazioni:</p>
+        <ul>
+          <li><strong>Denaro e oggetti di valore:</strong> non lasciare mai i propri oggetti ed effetti personali
+          incustoditi; durante le ore scolastiche, e le attività si consiglia di portare lo stretto necessario di
+          denaro e riporre documenti, tessera sanitaria, altri oggetti di valore nella vostra camera chiusi in
+          valigia.</li>
+        </ul>
+
+        <h3>🚨 Come evitare guai con le autorità</h3>
+        <ul>
+          <li class="no">È vietato fumare in tutti i luoghi pubblici al chiuso e in famiglia.</li>
+          <li class="no">Se trovato in possesso di sostanze illegali o droghe durante il soggiorno, sarai
+          perseguibile legalmente e/o arrestato.</li>
+          <li class="no">I minori di 18 anni non possono acquistare né consumare bevande alcoliche.</li>
+          <li class="no">Non bere alcool per strada.</li>
+          <li class="no">È illegale portare con sé coltelli/coltellini di qualsiasi genere.</li>
+          <li class="no">È vietato fotografare gli interni delle abitazioni senza il consenso dei proprietari.</li>
+        </ul>
+
+        <h3>🏥 In caso di malattia</h3>
+        <p>Tutti i nostri soggiorni sono coperti da assicurazione medico/sanitaria, bagaglio e annullamento.
+        Il partecipante dovrà portare con sé la tessera sanitaria in originale (da conservare in valigia
+        presso la famiglia ospitante).</p>
+
+        <div class="dossier-source">
+          <strong>LET — Language Educational Travels</strong><br>
+          Viale Abruzzi 13/a, 20131 Milano · LET s.r.l. · CF/PIVA 06847760961 · REA MI – 1919977<br>
+          Tel 02 45077964 · Fax 02 45500633 · Mail: <a href="mailto:info@letworld.it">info@letworld.it</a> ·
+          Web: <a href="https://www.letworld.it" target="_blank" rel="noopener">www.letworld.it</a>
+        </div>
+      </div>
+    </section>
+
     <section class="alert-box" id="avvisi">
       <h2>📢 Informazioni organizzative</h2>
       <p style="margin: 0 0 14px; font-style: italic;">Come già comunicato nella circolare del 25 maggio:</p>
@@ -1136,6 +1442,7 @@ to{transform:rotate(360deg)}}
     </section>
 
     <nav class="nav">
+      <a href="#dossier">📋 Dossier</a>
       <a href="#avvisi">📢 Avvisi</a>
       <a href="#info">ℹ️ Info</a>
       <a href="#programma">📅 Programma</a>
@@ -1167,18 +1474,18 @@ to{transform:rotate(360deg)}}
 
       <div class="flight-grid">
         <div class="flight-box out">
-          <div class="fl-label">✈️ Andata — Aer Lingus</div>
+          <div class="fl-label">✈️ Andata — Aer Lingus · Volo EI433</div>
           <div class="fl-date">Domenica 27 settembre 2026</div>
           <div class="flight-route">
             <div class="pt"><div class="time">11:20</div><div class="apt">Milano Linate (LIN)</div></div>
             <div class="arrow">✈ — — — ➤</div>
-            <div class="pt"><div class="time">12:50</div><div class="apt">Dublino (DUB)</div></div>
+            <div class="pt"><div class="time">12:55</div><div class="apt">Dublino (DUB)</div></div>
           </div>
-          <div class="fl-note">Orari locali · Trasferimento in pullman all'arrivo verso Malahide</div>
+          <div class="fl-note">Ritrovo in aeroporto alle <strong>08:50</strong>, primo piano banchi Aer Lingus · Orari locali</div>
         </div>
 
         <div class="flight-box back">
-          <div class="fl-label">✈️ Ritorno — Aer Lingus</div>
+          <div class="fl-label">✈️ Ritorno — Aer Lingus · Volo EI436</div>
           <div class="fl-date">Domenica 4 ottobre 2026</div>
           <div class="flight-route">
             <div class="pt"><div class="time">18:00</div><div class="apt">Dublino (DUB)</div></div>
@@ -1202,7 +1509,7 @@ to{transform:rotate(360deg)}}
             </tr>
             <tr>
               <td class="day-cell">Dom 27/09</td>
-              <td class="am" colspan="2" style="border-radius: 0 10px 10px 0;">✈️ Arrivo a Dublino e trasferimento a Malahide — sistemazione presso le famiglie</td>
+              <td class="am" colspan="2" style="border-radius: 0 10px 10px 0;">✈️ Ritrovo a Linate alle 08:50 · volo EI433 · arrivo a Dublino e trasferimento in bus privato al meeting point di Malahide — sistemazione presso le famiglie</td>
             </tr>
             <tr>
               <td class="day-cell">Lun 28/09</td>
@@ -1915,7 +2222,7 @@ to{transform:rotate(360deg)}}
           🌧️ Che tempo fa? Cosa metto in valigia?
         </div>
         <div class="faq-answer">
-          A settembre: 15-18°C, possibili piogge. <strong>Essenziale:</strong> giacca impermeabile, felpa, scarpe comode e impermeabili, ombrello compatto. Il tempo cambia spesso, vestiti a strati!
+Secondo il dossier LET la temperatura massima stagionale è di <strong>16°C</strong> e la minima di <strong>10°C</strong>, con giornate spesso piovose. <strong>Essenziale:</strong> giacca impermeabile, felpa, scarpe comode e impermeabili, ombrello compatto. Indossa già alla partenza i capi più pesanti, così non pesano in valigia.
         </div>
       </div>
 
@@ -1933,7 +2240,7 @@ to{transform:rotate(360deg)}}
           🏥 Come funziona la sanità? Serve assicurazione?
         </div>
         <div class="faq-answer">
-          Porta la <strong>Tessera Europea di Assicurazione Malattia (TEAM)</strong> - la trovi sul retro della tua tessera sanitaria. Copre le emergenze mediche. Per sicurezza, verifica se hai un'assicurazione viaggio.
+Il soggiorno è <strong>già coperto da assicurazione medico/sanitaria, bagaglio e annullamento</strong> tramite l'agenzia LET. Porta comunque la <strong>tessera sanitaria in originale</strong> (con la TEAM sul retro), da conservare in valigia presso la famiglia ospitante.
         </div>
       </div>
 
